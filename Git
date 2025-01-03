@@ -1,1 +1,52 @@
+------Git------------
+
+stages
+-modified
+-staged
+-commited
+
+initialize git monitoring files and folders in a dir 
+>>git init
+
+check status 
+>>git status
+
+create user
+>>git config --global user.name 'name'
+
+create email
+>>git config --global user.email 'emailaddress'
+
+git opens defult editor Vim to change
+>>git config --system core.editor vim
+
+assigning alias commands
+>>git config --global alias."alias command" "alias orignal command"
+
+check config file
+>>cat ~/.gitconfig
+
+adding files/folders to stagged stage
+>>git add .
+above adds all the files and folders modified to stagged stage 
+to add just specific files mention file  names in the git command
+>> git add filename
+
+ignore the files/folders by git use .ignore file within same folder where the git is initilized
+>> just add file/folder names that you want git to untrack
+
+commiting files from staged stage to commited stage
+>>git commit
+
+check commits log
+>>git log --online
+
+check config
+>>cat .gitconfig
+
+Branches 
+
+
+
+
 
