@@ -39,12 +39,13 @@ commiting files from staged stage to commited stage
 >>git commit
 
 check commits log
->>git log --online
+>>git log --oneline
 
 check config
 >>cat .gitconfig
 
 --Branches-- 
+branches are the copy of the main/master branch
 check which branch HEAD is pointing at simply it will show *master if pointing at other branch then it would be  *other
 >>git branch
 output: *master
@@ -67,6 +68,58 @@ deleting branch
 >>git branch -d branchname
 
 Merging branches
+>>git merge branchname
+
+check diffrence of contents of same file at diffrent versions when it in staged
+>> git diff --staged
+output:
+--- a/filename (this shows old content)
++++ b/filename (this shows new content)
+- content in red is removed
++ content in green added
+
+get the content diffrence between commit IDs
+>>git diff ID1 ID2
+
+get diffrence between branches
+>>git diff branch1 branch2
+
+conflicting changes do not allow to switch branch without commit
+git stash used to save changes and move to other branch 
+>> git stash 
+used to get back saved vhenges in the branch back, add and commit when needed
+>>git stash pop
+stash can be moved to out branchs
+>>git stash pop (after switched to other branch)
+to list stash list
+>>git stash list
+output: stash@{0} WIP on mastet: ID 
+apply stash you want to apply
+>>git stash apply stash@{3}
+
+to move to previous commits
+>>git checkout commitid
+
+move back to latest from old commits both works
+>>git checkout master
+>>git reflog
+
+
+rebase deletes the history and ment to be applied on the branches not on the master/main branch
+>>git rebase branchname (make sure you are on diffrent branch not in main/master)
+learn more about rebase
+
+--------github------------
+n 
+
+
+
+
+
+
+
+
+
 
 
 
