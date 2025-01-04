@@ -1,4 +1,5 @@
 ------Git------------
+Git is a version control software
 
 stages
 -modified
@@ -104,13 +105,67 @@ move back to latest from old commits both works
 >>git checkout master
 >>git reflog
 
+rename branch name 
+>>git branch -M branchname
 
 rebase deletes the history and ment to be applied on the branches not on the master/main branch
 >>git rebase branchname (make sure you are on diffrent branch not in main/master)
 learn more about rebase
 
 --------github------------
-n 
+github is a service uses git software
+alternatives to github is gitlab, bitbucket
+github uses ssh to allow you to push code
+password based code push is not allowed
+
+
+create repo in github
+        > reponame
+        > description
+        > public/private
+        > add readme file (optional)
+         
+to add remote repository
+>>git remote add origin "repo URL"
+
+to push to remote repo
+>>git push -u origin branchname
+note: -u setup an upstream onetime that allows you to run future command git push wihout mention of -u
+>>git push
+
+rename remote reponame
+>>git remtote rename oldname newname
+
+check remote version url push/fetch
+>>git remote -v
+
+readme.md
+.md markdown file
+
+clone repo
+>>git clone URL
+URL is the github repo
+cloning repo will set the remote as default from clone command URL
+
+get info ou dont put in work area
+>>git fetch
+
+get info and add it in my work
+git pull = git fetch + git merge
+>>git pull
+
+github features
+-codespace
+-opensource contributions
+
+----opensource contributions steps-----
+fork repo work on that and pull reqest to opensource codebase 
+Talk- because no one knows what you are working on
+open an issue (adding feature, fixing bug)
+get the issue assiged
+nake PR (pull request) and iterate over it
+
+
 
 
 
