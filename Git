@@ -44,7 +44,38 @@ check commits log
 check config
 >>cat .gitconfig
 
-Branches 
+--Branches-- 
+check which branch HEAD is pointing at simply it will show *master if pointing at other branch then it would be  *other
+>>git branch
+output: *master
+         other
+
+create branch 
+>>git branch branchname
+
+pointing at branch
+>>git checkout branchname
+>>git switch branchname
+note: switch/checkout both has same function ,to check the status, within .git dir navigate to HEAD file it should be pointing to specific branchname entered in the command 
+HEAD file content : ref: refs/heads/branchname
+
+create branch and switch to branch, below both functions same
+>>git switch -c branchname
+>>git checkout -b branchname
+
+deleting branch
+>>git branch -d branchname
+
+Merging branches
+
+
+
+
+
+
+
+
+
 
 
 
