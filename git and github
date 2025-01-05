@@ -200,18 +200,21 @@ step3. copy contents of id_rsa.pub to Github add ssh key
 
 
 Interview questions
->how to initialize git in a direcorty
->clone vs fork
->merge vs rebase
-
-
-
-
-
-
-
-
-
+> how to initialize git in a direcorty
+> clone vs fork
+> merge vs rebase
+> is git Distributed or centralized version control system what is the difference
+> what are the git commands that you use to commit changes to your remote repo
+> git fetch vs git pull
+> git merge vs git rebase
+> what is .git and .gitignore
+> pre-commit hooks and post commit hooks
+> what is webhook
+> pull and push changes to git
+> git stash and use cases
+> cheryy pick in git
+> ammend a commit in git
+> how to resolve merge conflict in git
 
 
 
