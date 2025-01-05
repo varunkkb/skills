@@ -11,6 +11,7 @@ initialize git monitoring files and folders in a dir
 
 check status 
 >>git status
+shows untracked files
 
 create user
 >>git config --global user.name 'name'
@@ -41,6 +42,7 @@ commiting files from staged stage to commited stage
 
 check commits log
 >>git log --oneline
+>>git log branchname
 
 check config
 >>cat .gitconfig
@@ -70,6 +72,10 @@ deleting branch
 
 Merging branches
 >>git merge branchname
+
+cherry-pick is to pick speciic commit
+>>git xhwrry-pixk commitid
+
 
 check diffrence of contents of same file at diffrent versions when it in staged
 >> git diff --staged
@@ -112,15 +118,36 @@ rebase deletes the history and ment to be applied on the branches not on the mas
 >>git rebase branchname (make sure you are on diffrent branch not in main/master)
 learn more about rebase
 
+branching strategies
+>master/main 
+The purpose of the main branch in the Git flow workflow is to contain production-ready code that can be released.
+>develop
+The develop branch is created at the start of a project and is maintained throughout the development process, and contains pre-production code with newly developed features that are in the process of being tested.
+>feature 
+The feature branch is the most common type of branch in the Git flow workflow. It is used when adding new features to your code.
+>release
+The release branch should be used when preparing new production releases.
+>hotfix
+The hotfix branch is used to quickly address necessary changes in your main branch.
+The base of the hotfix branch should be your main branch and should be merged back into both the main and develop branches.
+1. A develop branch is created from main
+2. A release branch is created from develop
+3. Feature branches are created from develop
+4. When a feature is complete it is merged into the develop branch
+5. When the release branch is done it is merged into develop and main
+6. If an issue in main is detected a hotfix branch is created from main
+7. Once the hotfix is complete it is merged to both develop and main
+
+
 --------github------------
-github is a service uses git software
+github is a distributed version control service uses git software
 alternatives to github is gitlab, bitbucket
 github uses ssh to allow you to push code
 password based code push is not allowed
 
 
 create repo in github
-        > reponame
+        > repo-name
         > description
         > public/private
         > add readme file (optional)
@@ -147,7 +174,7 @@ clone repo
 URL is the github repo
 cloning repo will set the remote as default from clone command URL
 
-get info ou dont put in work area
+get info but dont put in work area
 >>git fetch
 
 get info and add it in my work
@@ -163,11 +190,18 @@ fork repo work on that and pull reqest to opensource codebase
 Talk- because no one knows what you are working on
 open an issue (adding feature, fixing bug)
 get the issue assiged
-nake PR (pull request) and iterate over it
+make PR (pull request) and iterate over it
+
+adding remote repo and pull/push via ssh
+step1. create ssh key  >>ssh-keygen -t rsa
+step2.  cd to /users/username/.ssh
+step3. copy contents of id_rsa.pub to Github add ssh key
 
 
 
-
+Interview questions
+>how to initialize git in a direcorty
+>clone vs fork
 
 
 
