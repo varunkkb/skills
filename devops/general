@@ -1,0 +1,7 @@
+--Creating VMs in cloud--
+
+  creatin needs API which needs to validate,autuntecate,authorize to create
+  can be created using AWS GUI   
+  AWS CLI
+  AWS API
+  AWS CFT vs AWS CDK
