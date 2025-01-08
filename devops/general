@@ -1,7 +1,97 @@
 --Creating VMs in cloud--
 
   creatin needs API which needs to validate,autuntecate,authorize to create
+
   can be created using AWS GUI   
   AWS CLI
   AWS API
   AWS CFT vs AWS CDK
+
+Accessing VM 
+  -AWS console (not convient, session also expires fast)
+  -desktop app CLI terminal ( Mac: iterm, windows: mobaXterm)
+using command line and Publi IP address to connect to instance , download private key from aws user portal
+  $ ssh user@IPaddress (this will denal the connecction)
+  $ ssh -i /user/path/downloads/authkey.pem user@IPaddress (faile to connect need to change permissions of the private key to use : changin chmod of key file with 600)
+  
+to delete the instance in portal
+- stop the instance
+- terminate the instance
+
+--configuring AWS CLI--
+AWS CLI - works with vaious services operating in AWS and flexible to run commands
+to download AWS cli , download it from AWS website (linux, windows, max installers)
+to show aws cli is installed or not type $aws which  output:/usr/local/bin/aws
+AWS CLI needs to authenticate access keys with credentials to connect to user (aws protal /user options/security credentials/ click on create access key key value pair )
+note: secreate key should be stored in secure vault or somewhere secure
+to configure user with AWS CLI
+-$aws configure
+-Aws access key ID : enter here
+-Aws secrete  access key : enter here
+-reagion leave default
+-outformat leave json default
+-connected
+
+Aws CLI commands
+-to list S3 buckets : $aws s3 ls
+all templates are available in website
+
+
+Day6- Linuz and shell scripting (nothing in the video need to search below in chatGpt)
+shell commands popiular need to automate and health checks and use cases search
+top 
+df -h
+chmod
+free
+nproc
+ps -ef
+grep
+vim,vi are interactive
+touch - is non interactive
+shell script starts with various shells depends on what you want to use
+#!/bin/bash
+       /ksh
+       /sh
+       /dash
+       /aix
+possible interview question shell types
+
+permissions and groups 
+777 user,group,others
+4 write
+2 read
+1 execute
+
+in shell scripting if you having multiple commands executed and out is mess use 
+set -x   #debuug mod
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-
+
+
+
+
+
+
+
+  
+
