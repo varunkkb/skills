@@ -46,6 +46,14 @@ free
 nproc
 ps -ef
 grep
+awk
+cURL
+wget
+find
+trap
+kill
+wc
+
 vim,vi are interactive
 touch - is non interactive
 shell script starts with various shells depends on what you want to use
@@ -64,6 +72,56 @@ permissions and groups
 
 in shell scripting if you having multiple commands executed and out is mess use 
 set -x   #debuug mod
+set -e   #exit the script if error  
+set -o   #pipefail 
+set -e and set -o both needs to be used together because set -e ignores pipe failures so for pipe failures need to add set -e
+
+stdin and stdout 
+date command is sending out put to stdin so | doesnt work
+ps -ef | grep string | awk -F" " '{print $2}' 
+above prints the 2nd coloum from the sp-ef with string match from that line
+
+fetch logs,packages,post values to url
+curl -X GET websiteaddress [to get values]
+curl -o [incrementall download doesn't puts burden on memory while downloding]
+
+wget downloads the file , also has incremental download
+wget url
+
+substuite user super user
+sudo su -  
+switch user to user
+su user
+
+loops ifelse, forloops
+check about trap signals 
+crontabs
+
+Interview questions
+-list the commmon commands
+-write a shell script to list all files or process ID in processlist
+-crontab
+-vim read only mode
+-softlink and hardlink
+-break and continue commands
+-disadvantages of shell scripting
+-diffrent types of loops and uses
+-dynamically typed and statically typed
+-network debuging shell commands (traceroute)
+-how to sort names (linux has native command called sort)
+- how will you manage logs of a system that generate huge logs files everyday (logrotate)
+
+
+
+
+x=missossopi
+grep -o "s" < <<"$x" | wc -l
+this will optput letter count in a word
+-o only
+"s" just s alphabet
+$x assigned value
+
+
 
 
 
