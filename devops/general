@@ -3,8 +3,8 @@
   creatin needs API which needs to validate,autuntecate,authorize to create
 
   can be created using AWS GUI   
-  AWS CLI
-  AWS API
+  AWS CLI 
+  AWS API-- one application is Boto3 [using boto3 can connect to Azure using its API)
   AWS CFT vs AWS CDK
 
 Accessing VM 
@@ -53,7 +53,7 @@ find
 trap
 kill
 wc
-
+jq [jq is json parser]
 vim,vi are interactive
 touch - is non interactive
 shell script starts with various shells depends on what you want to use
@@ -112,27 +112,42 @@ Interview questions
 - how will you manage logs of a system that generate huge logs files everyday (logrotate)
 
 
-
-
+Shell script
 x=missossopi
 grep -o "s" < <<"$x" | wc -l
 this will optput letter count in a word
--o only
-"s" just s alphabet
-$x assigned value
+   -o only
+   "s" just s alphabet
+   $x assigned value
 
 
+Aws ClI commands can be sued in shell scripting - docs available in aws website
+aws s3 ls                  [lists s3 buckets]
+aws ec2 describe-instances [list Ec2 instances]
+aws lambda list-functions  [list lambda]
+aws iam list-users         [list IAM users]
 
+aws ec2 describe-instances [this will out put the details in Json formate] to parse the Json below we are using jq
+each object has Reservations[], Instances[] arrays
 
+$aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+this will output the instances IDs
 
+$aws s3 ls >> resourceTracker [resourceTracker this will output details in to file]
 
+Day8 - https://github.com/iam-veeramalla/shell-scripting-projects/blob/main/github-api/list-users.sh
+shell script project Github ApI Integration
 
+Day9-day11 Git and Git hub 
 
+day12 -creating Ec2 instance - creating NSG to open port - deployinh node app
 
+Day13 - AWS services Top 15
+Ec2, VPC, EBS, S3, IAM, cloudwatch,LAMBDA,cloud build services [aws code pipeline,code build, code deploy],aws confiration,billing and costing ,Aws KMS, cloud Trail,EKS, fargate , ECS,ELK)     
+good to have
+ML- Tenserflow
 
-
-
-
+Day14 - Configuration managment
 
 
 
