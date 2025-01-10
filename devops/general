@@ -221,7 +221,43 @@ ansible playbooks - works when to execute set of commands
     --file end---
 
 to run the ansible playbook 
--$ansible-playbook -i inventory playbookfilename.yml
+-$ansible-playbook -v -i inventory playbookfilename.yml
+-v means debug [ to get the steps as output]
+
+Ansible roles
+- it is used to write structured and efficient playbooks in whcih you need to write very large tasks
+- to create roles $ ansible-galaxy role init rolename
+- this created bunch of files in same dirctory better to creaate seperate folder while creating it
+- check ansible docks for sample playbooks
+
+this ansible plabook main diroctory will have file named site.yml 
+ -hosts:all 
+  roles:
+      -rolename2
+      -rolename1
+
+https://github.com/ansible/ansible-examples
+within role roles/rolename1 folder there will be tasks folder with main.yml for each role
+other folders 
+meta- the give meta details 
+defaults are used to store default values
+test to wirte test scripts
+handlers  
+tasks
+readme.md to write some details 
+files are used to store certficates , anyfiles
+templates 
+
+Day 16 Infrastructure as code terraform
+Terraform is converting configuration to target api requests to various cloud providers
+API as code
+
+Day 17 Evertung about Terraform
+write, plan, apply [ life cycle]
+
+
+
+
 
 
 
