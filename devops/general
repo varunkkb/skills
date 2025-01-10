@@ -148,6 +148,88 @@ good to have
 ML- Tenserflow
 
 Day14 - Configuration managment
+puppet, ansible ,chef,salt 
+
+uses 
+1.upgrades
+2.secure patches
+3.installation
+
+diffrence between puppet and ansible
+-ansible is push model, agentless,easy, yaml
+-puppet is pull model, master slave , puppet language
+
+ansible dynamic inventry (custom library/modules read more) 
+ansible galaxy module development using pyton
+
+disavvantages with ansible
+ -some sight issues with windows
+ -debugging issue
+ -performance san be imporved
+
+interview questions
+-what is the programming language uses , can you wrte you own modules
+-which operatig sysyesm it suppots (linux: ssh, windows win rm)
+-puppet vs ansible vs  chef
+-what machenisih ansible uses
+-what programming language it uses (YAML)
+-does it support all cloud provides (it doesn depend on cloud supports it just need machiens tobe publically accessible and have access to ssh/winrm
+-ansible adhoc vs commands and pllaybooks 
+
+Day 15 ansible zero to hero
+install ansible in server
+-sudo apt install ansible
+-refere the ansible doc for more details
+-install key 
+-$ssh-keygen [key gen run on ansible server copy] this creates files at path /home/ubuntu/.ssh [authorised_keys, id_rsa, id_rsa.pub, known_hosts]
+-run same command on destination server [copy id_rsa.pub key from ansible server to target server authorized_keys file] 
+
+adding target servers in ansible server
+-add  IP address of target servers in inventory file at /ansible/inventory
+
+note ansible commands can be run in commandline aswel [ ansible adhoc commands]
+-creating file on target machine
+  $ansible -i inventory all -m "shell" -a "touch filename"
+  -m modules [ -m is used to run shell] 
+
+grouping of servers list in inventory
+inside invontory file
+  [groupname]
+  list IPs below
+
+running command  $ansible -i inventory groupname all -m "shell" -a "touch filename"
+
+ansible playbooks - works when to execute set of commands
+- create file filename.yml
+- open file and start with --- (enter three --- )
+- if needed to write multiple playbook in same file then start second with -name again below that
+   --file start--
+   ---
+   - name: install ans start nginx
+     hosts: all
+     become: root   [ comment : dont have to mention root here id the user running the ansible script has persmission to run script]
+
+     tasks:
+     - name: install nginx
+       apt:
+          name: nginx
+          state: present
+     - name: start nginx
+       service:
+        name: nginx
+        state: started
+    --file end---
+
+to run the ansible playbook 
+-$ansible-playbook -i inventory playbookfilename.yml
+
+
+
+
+
+
+
+
 
 
 
