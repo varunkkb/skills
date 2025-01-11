@@ -253,12 +253,61 @@ Terraform is converting configuration to target api requests to various cloud pr
 API as code
 
 Day 17 Evertung about Terraform
-write, plan, apply [ life cycle]
+aws configure needs to be configured to authenticate
+https://github.com/iam-veeramalla/terraform-zero-to-hero/tree/main/Day-1
+write, plan, apply, destroy [ life cycle]
+terraform init ----Initialize
+terraform plan ----dry run
+terraform apply 
+
+main.tf where the tera form tasks are written
+outputs.tf is the file where outputs are configured
+variables.tf where variables are written
+terraform.tfstate file terraform tracks the changes [usually stored remotely , no mannual changes should me made]
+
+usual arcitecture is jenkins monitors for github(terraform files) and runs it on aws 
+terraform s3 bucket is stored in s3 bucket - is connected with DynamoDb so that stae file is locked in case same chanes are made by two users can have conflicting parller case
+creating these both changes in remote.tf
+modules are way of witing reusable code the about config is written in module so other terraform scripts can make use of it
+
+chanllenges with terraform
+-state file is single source of truth
+-manual changes to the cloud provider cannot be identified and auto-corrected
+-not a gitops friendly tool.Dont't play well with flux or argo CD
+-can become very complex and difficult to manage
+-Trying to position as a configuration managment tool as well [example terraform being used as ansible]
+
+Day18 - introduction to CICD
+
+unit testng - testing specific functionality
+static code analysis 
+code quality /vulnerbility
+automation testing
+reporting
+deployment
+
+dev/stage/production stages
+
+Day19 Jenkins zeroto hero
+Jenkins is the not the best solution alternatives (github actions, github pipelines, circleCI)
+
+install Jenkins
+prerequisite is java to be installed , jenkins is java based
+
+after installing Jenkins temp pws will be saved at location to initally login to jenkins portal
+/var/lib.jenkins/secretes/initialAdminPassword
+install sugested plugins 
+create user and change passwd
+
+architecure
+jenkins master node
+jenkins worker nodes 
+
+This archtecture is not good if variety of applications are to be installed 
+also worker node and master nodes are always up even when there is no request sent to master/worker node - nodes are sitting ideal
 
 
-
-
-
+to restart jenkins via web broser Ip:8080/restart
 
 
 
