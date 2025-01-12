@@ -308,19 +308,91 @@ also worker node and master nodes are always up even when there is no request se
 
 
 to restart jenkins via web broser Ip:8080/restart
+https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/tree/main
+
+Day20
+https://github.com/iam-veeramalla/GitHub-Actions-Zero-to-Hero
 
 
+github actions self hosted runners | github hosted runners |compare with jenkins
+What is Self Hosted Runners ?
+Advantages of using Self Hosted Runners ?
+Scenario based Interview questions on Self Hosted Runners.
+Step by Step Demo to write your first GitHub Actions CI using the Self Hosted Runners. 
+EC2 instance as Self Hosted Runners ?
 
+day21  CICD Interview Questions | GitHub Repo
+https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/blob/main/Interview_Questions.md
+https://github.com/iam-veeramalla/GitHub-Actions-Zero-to-Hero
 
+day 22 Project Management tools for DevOps 
+https://en.wikipedia.org/wiki/Agile_software_development
+https://confluence.atlassian.com/adminjiraserver/get-a-jira-data-center-trial-license-1189482127.html
 
+https://www.youtube.com/watch?v=pUAadFQjnvc&list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa&index=28
+JIRA Workflow in Real Time for DevOps Projects | Agile & Scrum Explained 
 
+Day23 Introduction to Containers | Learn about containers in easy way
+How containers solve the problems with Docker ?
+What is a Container  and use-cases ?
+What is Docker ?
+Docker Life Cycle
+Problems with Docker
+Introduction to Buildah
 
+Learn Kubernetes FREE Practically -
+All Labs page: https://kode.wiki/3RxQ3dL 
+Familiarize with environment: https://kode.wiki/4etu01y 
+Pods: https://kode.wiki/3KIMDRL 
+Replica Sets: https://kode.wiki/3RxA8Mt
+Deployments: https://kode.wiki/4c3YUw7 
+Rolling Updates and Rollbacks: https://kode.wiki/4cpKxSo 
+Services: https://kode.wiki/45pFOhr
 
+Day24 Docker zero to hero
+Docker architecture -https://github.com/iam-veeramalla/Docker-Zero-to-Hero
 
+Day25 Docker containerzation for Django
+https://github.com/iam-veeramalla/Docker-Zero-to-Hero/tree/main/examples/python-web-app
 
+day26 multistage docker builds | reduce image size by 800| disctroless images
+https://github.com/iam-veeramalla/Docker-Zero-to-Hero/tree/main/examples/golang-multi-stage-docker-build
 
+Day27 docker volums and bind mounts | persistent storage for docker
+https://docs.docker.com/engine/storage/volumes/
+https://github.com/iam-veeramalla/Docker-Zero-to-Hero/blob/main/volumes.md
 
+Day-28 | Docker Networking | Bridge vs Host vs Overlay |Secure containers with custom bridge network
+https://github.com/iam-veeramalla/Docker-Zero-to-Hero/blob/main/networking.md
+1. Why you need networking on Docker ?
+2. How does Docker Networking Work ?
+3. What are different types of Networking in Docker ?
+4. Which Networking is default and Out of the Box ?
+5. Play with Docker containers and inspect their Networks
+6. Create a custom bridge network to secure it from other containers
 
+read through my reads
+https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html
+
+Day-29 | Docker Interview Questions with Answers | How many can you answer ? | Comment your score
+what is Docker
+how container is Diffrent from virtual machines
+what is docker life cycle
+docker componenets
+docker COPY and docker ADD
+CMD and Entripoint
+what are the neworking types and default ?
+isolating networking between the containers
+multi stage build in docker
+distoless iamges in docker
+real time challenges with docker
+  -docker sia single daemon process and single point of failure [podman solution]
+  -docker daemon rusn as root user, which is security threat , any process runnign as root can have adverse effects. 
+  -running too many containers on single host can have resource constraints
+securitin containers
+- use distroless or not too many packages
+- ensure networking is properly conigured
+- utilities like sync to scan container images
 
 
 
