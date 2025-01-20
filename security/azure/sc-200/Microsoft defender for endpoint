@@ -1,0 +1,92 @@
+Introduction Microsoft defender for endpoint
+  -It is comprehensive endpoint protection platform (EPP)
+  -layered approch of protection
+
+Features Microsot defender for endpoint
+1.Next-Generation Antivirus (NGAV)
+    utilizes advanced threat detection techniques
+    Beyond traditional signature-based antivirus
+    It utilizes machine learning and behavioral analysis to identify and block threats
+2. Enpoint detection and response (EDR)
+    povides deep visibility into endpoint activity
+    continuous monitoring for suspicious behaviours 
+    identifies potential vulnerabilities and unauthorized access attempts
+3  attack surface reduction (ASR)
+    Hardens the environment by limiting attack vectors
+    restricts unathorized applications,scripts and macros
+    reduces the attack surface for malicious actors
+4. endpoint vulnerbility managment
+   identieies and prioritzes vulners
+   focus on patching critical vulnerbilties
+   prevents exploitation by attackers
+5  automatic remediation
+   automates certain remediation actions
+   isolates infected devices
+   blocks malicious URLs and rolls back unautorized changes
+
+Benifites
+1. Poactive threat detection
+   identifies and blocks sophisticated attacks
+   including zero-day threats
+   prevents significant damage
+2 improved incident response
+  provides deep visibility for faster incident response
+  quick identification of attack scope
+  facilitates appropriate mitgation actions
+3. Reduced attack surface 
+    hardens the environemnt 
+    limits potential attack vectors
+    makes it difficult for attackers to gain a foothold
+4.simplified managment
+   unified platform managing endpoint security
+    simpliies security operations
+    reduces administrative overhead
+
+---Introduction to Azure Arc----
+-The cloud computing landscape is evolving towards hybrid and multi-cloud stragegies
+-managing resources across various environments is complex
+-axure arc acts as a bridge, extending azure management to existing infrastructure
+
+Azure Arc
+-Azure arc manaement and governence solution for entire IT infrastructure
+-unified platform : manages resourcees regardless of location 
+          on-premisis resources (manage physcial and VMs (win,linux)
+          other cloud environments (EC2, S3, etc)
+          edge devices (IoT devices and Intelligence devices at network edge)
+
+Core functionalities of Azure Arc
+- Resource inventory and management
+  obtain a comprehensice view of IT infrastructure across Axure , other cloud, on-premises
+-Policy enforcement
+  Apply consistent security policies and governance contols in hybrid and multi-cloud env
+-configuration management  
+  simplify resource configuration managment with tools like azure policy and desisired state configuration (DSC)
+-data security and monitoring 
+  leverage azure security services for monitring and protecting resources across diverse environments
+
+Benifites of Azure Arc
+-unified managment experience 
+       manage all resources from a single pane of glass in Azure portal
+       simplifies IT operations and reduce complexity
+-security and governance
+        apply consistent security policies across entire IT infrastructure 
+        leverage azure securiy services for enhanced protection
+-flexibiltir and choice
+        maintain hybrid on cloud-strategy without vendor lock-in
+        manage resources across Azure,other cloud, on-prem env
+-innovation and optiization
+        extend azure services like Azure monitor and azure automation to non azure resources
+        enables enhanced monitoring ,optimization and automation capabiltites across entire IT infracture
+
+
+
+       
+
+
+
+
+
+
+  
+  
+
