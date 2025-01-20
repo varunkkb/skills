@@ -78,7 +78,254 @@ Benifites of Azure Arc
         extend azure services like Azure monitor and azure automation to non azure resources
         enables enhanced monitoring ,optimization and automation capabiltites across entire IT infracture
 
+Azure Arc and Defender for Enpoint Integration
+1. Onboarding Anon-Azure machines
+     Deploy defender for edpoint agent on on-premises servers or resources in other clouds
+     Azure Arc facilitates onboarding process
+     Anon-azure machines report to defenderfor endpoint within Azure portal
+2. Centralized managment and visibility
+     manage and monitor security posture of all endpoints from azure defender for endpoint
+     central location for holistic view of potential threats across entire IT infa
+3. consistent security policies
+    enforce consistent security policies and configuration for defender for endpoint agent
+    Apply policies across all environments: on-premises or other clouds
+    ensures standardized security posture
 
+benifits of Integration
+- Enhanced threat protection
+    extends advanced threat detection and prevention capabilities of defender for endpoint to entire IT infa
+    safeguards both azure and non-azure reosurces
+-improved security visibility
+    unified view of security posture across hybrid and multi-cloud environemnt.
+    faster identifcation and reponse to potential security threats
+-simplified security managment
+    manages and monitor endpoint secuity rom a single console
+    reduces complexity and streamlines securiy operations
+
+
+why on board non-azure devices
+1 unified security posture 
+   -centralize threat detection and response for all devices
+   -avoid switching between consoles and correlating events across tools
+   -streamline security operations and respond to threats faster 
+2 consistent threat protection
+   -apply advanced threat protection to all devices
+       next-gen antivirus
+       endpoint vulnerbility assessments
+       behavior monotoring
+       real-time threat intelligence
+   -use the power of microsoft's global security infrastructure
+3 simplified management 
+   -managing endpoint security can be a complex task especially in hybrid environments
+        centralized platform for managing secrity policies
+        monitoring threats
+        investigate incidents
+        deploy solutions
+   -reduce administrative overhead and improve efficiency
+   - security team to focus on strategic initiatives
+4 enhanced visibility
+      -gain a holistic view of your org security postture
+      -consolidate security data from all endpoints
+      -mak informed decisions on resource allocation and prioritze security investments
+      -proactively address security gaps
+
+onboarding options
+1. direct onboarding (recommended for most scenarios)
+      -direct way to on board non -azure devices
+      -involves installing the MDE sensor directly on the device itself
+      -ideal for organizations of all sizes and requires minimal azure configuration
+      -steps
+          downlooad the MDE onboarding package from the security center portal.
+              installer for the MDE sensor
+              necessary config files
+          preapre the non-azure device
+              system requirments for MDE
+              temporarily disabling any conflicting antivirus or endpoints protection software
+          run the MDE sensor installer, provide tenant ID and token
+          device register with MDE and starts reporting security data
+              device listed in the devices list within the security center portal
+2. Azure Aex Integration
+        -for large-scale deployments or existing azure arc users.
+        -leverages azure arc to manage on-premisis infra
+        -streamlime onboarding experience for your non-azure devices
+        - Azure Arc creates a hybrid management plane that extends azure's management capaibilities to on-premis
+        -seamlessly onbiard MDE to the Microsoft defender for cloud
+
+Microsoft defender for endpoints - Demo
+Onborading non -Azure devices
+        -MS defender page -> setteings -> Endpoints-> onboarding-> select OS , deployment methods -> download package
+        -Run deplyment detection test
+
+Microsoft defender for endpoint - advanced features
+    -shifting from reactive to proactive 
+    -deeper visibility, stronger defence
+    -precision is key
+    -stay ahead of evolving threats
+          cutting -edge technologies like behavioral analytics and machine learning
+          to combat even the most sophisticated attacks
+
+Advanced capabilities
+1. endpoint detection and response (EDR) in block mode
+    actively blocks malicious files and behabiour in real-time
+    front-line defense against zero-day attacks and emerging threats
+2. Advanced hunting
+     -use a powerful query languae to sift through endpoint data
+        uncover hidden threats
+        indicators of compromises(IOCs)
+        patterns
+3. Threat and vulnerbility management(TVM)
+        assess the risk of each vulnerbility 
+        focus on patching efforts on the most critical issues
+4 Attack surface reduction rules (ASR)
+      -block common attack vecors
+          malicious macros
+          untrusted scripts
+          unauthorized network connections
+      -prevetnts threats from gaining a foothold on you endpointa
+5 live response
+      -block common attack vectors
+          investigate threats
+          collect evidence
+          take remediation actions in real-time
+               terminating processes
+                quarantining files
+6 custom indicators
+      -bult-in threat intelligence
+           Define file hashes
+           IP addresses
+           URLs
+           Attributes as indicators of compromise
+           tailor threat detection
+
+
+Advanced feature - restrict correlation
+      MS defender->settings-> advanced features-> restrict correlation to within scoped device group (on/off)
+
+Incident correlation 
+    process of linking related alerts together to form a comprehensive incident
+    this helps SOC analysts understand the full scope of a potential security event
+    defender for endpoint correlates alerts across your entire tenant
+    if multiple alerts are triggered on different devices but they share common characteristics
+      tactics,techniques,procedures
+      suspicious powershell activity
+      lateral movement attempts
+      data exfiltration attempts
+    these combined indicators point to a targeted ransomware attack by a known group
+    groups related alerts into a single incident
+
+How restricting correlation works
+    device group scoping
+    seperate incidents
+    focused investigations
+    controlled visibility
+
+EDR in block mode
+  -EDR in block mode is like having a vigilant security guard at every endpoint
+  -it not only detects malicioud activity but also takes immediate action  to stop it 
+  -reduces the risk of damage caused by threats that traditional antivirus solutions might miss
+
+Why enable EDR in block mode
+  Zero-day protection
+    block mode can block threats that have not yet been identified as malware
+    offering protection against zero day attacks
+  enhanced security
+    provides an extra layer of security on top of antivirus solution
+    strengthens your defense against sophistecated attacks
+  reduced attack impack
+    stops malicious activity in its tracks
+    minimizes the potential damage caused by an attack
+ faster incident reponse
+    allows you to contain threats quickly
+    buy valuable time to investigate and remediate
+
+Who should enable EDR in block mode
+  high-risk environments
+    handling sensetive data or operate in high-risk industry
+    the extra layer of protection provided by block mode is crucial
+  limited security resources
+    if small security team, block mode can help automate threat containment
+  strong incident response capabilities
+    block mode can complement your existing security measures
+    enhance your response capabilities
+
+considerations before enabling block mode
+  false positives
+    small chance of false positives where legitimate activities migh be blocked 
+    monitor the results closely and adjust your settings as needed
+  licensing
+    EDR in block mode is typically available with MS defender for endpoint plan 2 licenses
+  tesing  
+     test block mode in a controlled environment before enabling it
+
+
+post-enablement steps
+  monitor alerts
+  review blocked events to identify any false positives and adjust settings 
+  fine-tune exclusions (creating exclusions)
+
+
+hide potential duplicate device records
+why it occurs
+      multiple discovery scans  
+      onboarded devices discovered
+      unintentional discovert (temp or guest machines)
+problem with duplicate records
+    inaccurate reporting (skewed reports and metrics)
+    confusing investigations
+    unnecessary licencing
+how to hide   
+    defender for endpoint offers a simple solution in settings
+
+    
+          
+
+
+    
+
+
+
+
+
+
+      
+
+
+
+
+
+        
+
+      
+    
+
+
+
+
+
+
+              
+              
+
+          
+
+
+
+
+
+
+
+
+   -
+  
+
+
+    
+
+
+
+
+
+    
 
        
 
