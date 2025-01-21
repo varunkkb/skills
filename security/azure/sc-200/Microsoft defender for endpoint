@@ -257,14 +257,14 @@ considerations before enabling block mode
   tesing  
      test block mode in a controlled environment before enabling it
 
-
 post-enablement steps
   monitor alerts
   review blocked events to identify any false positives and adjust settings 
   fine-tune exclusions (creating exclusions)
 
 
-hide potential duplicate device records
+
+Hide potential duplicate device records
 why it occurs
       multiple discovery scans  
       onboarded devices discovered
@@ -275,8 +275,198 @@ problem with duplicate records
     unnecessary licencing
 how to hide   
     defender for endpoint offers a simple solution in settings
-
+    MS defender -> settings -> endpoints -> advanced features -> "hide potential duplicate devices records (on/off)"
     
+
+Advanced feature - Allow or Block files with Microsoft defender for endpoint
+-create a whitelist of trusted files or blacklist potentially malcious ones
+-enhance your security posture and protect our endpoints from threats
+prerequuisites
+  windows defender antivirus (turned on)
+  cloud based protection (enable it in cloud bases settings in defender for endpoint setings)
+  Allows for real-time upates on file reputatuns and threat intel
+Why allow or block files
+enhanced security
+   provides an additional layer of protection
+   proactively block known malicious files or even suspicious files that haven't yet been identified as threats
+customizable control
+   granular control over files 
+   tailor specific to org
+Incident reponse  
+   quickly block limiting its spread and potential damage
+flexible management
+    easily update your allow/block lists as needed
+MS defender -> settings -> endpoints -> advanced features -> "Allow or block file (on/off)"
+important considerations
+    file hash accuracy (to avoid uninteded consequences)
+    testing (before applying it org wide)
+    regular update of (allow/block list to keep up with the latest threats)
+    exception handling (process in place if legitimate files are blocked)
+
+Advanced feature: custom network indicators
+-Tailor network protection by creating customized alow/block lists
+    IP addresses
+    Domains
+    URLs
+Why cusotm network indicators matter
+  threat landscape is continously evolving, relying solely on pre-defined threat lists might not be enough
+  custom network indicators offers a more tailored appoach
+block known malicious entities
+  proactively block them to prevent communication with those entities
+Allow trusted connection
+  creat allow list for trusted sources so legitmate bussiness ops are not disruted
+repond to emeging threats
+  rapidly deployed to block newly discovered threats before they can cause significiant damage
+Granular control
+  precise control over your network traffic 
+  allows you to create tailored security policies for diffrent department or user groups
+MS defender -> settings -> endpoints -> advanced features -> "custom network indicators (on/off)"
+prerequisites
+   windows 10 version 1709 or later
+   enable network protection and set it to block mode in micorsoft defender for endpoint settings
+adding indicators
+  MS defender -> settings -> endpoints -> indicators -> files, IP addresses, URLs/Domains, certificates (block/allow)
+Advanced tips
+    Wildcards  
+        *.example.com  (block/allow) 
+    indicators expiratiom
+         alow expiration so it is not allowed/blocked indefently
+    bulk import/Export
+     .csv files to easly manage 
+    integration with threat intel
+      to automatically create indicators based on known malicious entities
+
+
+Advanced feature : tamper protection (shielding your security)
+-ensuring the integrity of the security solution itself
+-preventing malicious actors from disabling essential security features within defender for endpoint
+How tamper protection safeguards endpoints
+-security feature protection 
+  It prevents unacthorized modifications to vital security functionalities
+        virus and threat protection
+        behaviour montiring
+        cloud-delivered protection
+-Mitigating attack techniques
+  actors disable endpoint security solution to gain a foothold within your system
+-maintaining visibility and control
+   Endsures security settings remains as intended
+   provides optimal protection and visibility
+prerequisites
+  available on windoes 10 and 11
+  secver 2022, 2019
+  MacOs versions 11
+  MS defender for endpoint version antimalware platform v4.4.2010.7 or higher
+  Anti-malware engine v11.17600.5 or higher
+  licensing (MS defender antivirus/ bussiness/ MS 365 E5 suscription)
+MS defender -> settings -> endpoints -> tamper protection (on/off)
+
+Advanced feature web content filtering
+-An integrated feature within MDE
+-Allows you to restrict user access to websites based on predefined categories
+      content categorization (MDE utilizes a pre-defined list of website categories
+          Adult content, gambling, social media
+-policy creation 
+      policies to block to specific categories
+      Allow access with exception for cetain groups or users
+-visibility and reporting
+      MDE provides reports on web browising activity
+      Allows you to track website access attempts and identify potential violatioons
+Benifits ofweb content filtering
+    blocking access to malicios websites 
+      malware, phishing attempts, online threats
+    improved productivity
+      limiting access to distracting websites like social media or gampling sites
+    compliance adherence
+      assist in complying with industry regulations or internal policies
+      regardng acceptable internet usage
+Prequisites
+    network prtection in block mode (enabled)
+    deploying MDE security baseline configures network protection
+MS defender -> settings -> endpoints -> advanced features -> web content filtering (on/off)        
+
+Advanced feature : Live response
+- provides a remote shell connection to a device enrolled in MDE
+- this functionality is just having a direct line to the endpoint
+      investigate suspicious activiy (forensics)
+       remediate threats (isolating infected devices, terminating malcious prcess, pusing remediation scripts)
+       collect evidence
+       servers - provides additional featiures tailored 
+           elevated privilages
+           enables admin actions
+           kernel mode memory analysis 
+-unsigned script execution
+      MDE offers the option to xecute unsigned scripts
+      
+requirments
+   supported OS (windows 10, 11)
+   windows secer 2022,2019 or later
+   MacOS version 10.15 (catalina) or higher
+   MDE agent installed 
+MS defender -> settings -> endpoints -> advanced features -> live reponse, live response for servers, live response unsigned script execution (on/off)
+  
+
+Advanced Feature: endopoint attack notification
+-leverages MS expertise in threat hunting
+-Analyzes MDE data to uncover potential security incidents and suspicious activities
+How it works
+ - MS threat hunting expertise
+    specialist Continously develop and refine threat hunting techniques
+ - Proactive threat detection
+    Analysinz endpoint data for anomalies and behaviour indcative of potential threats
+ - Prioritized alerts
+    Prioritize alerts based on urgency and potential impact, allowing to focus on critical ones first
+Benifits
+    Enhanced threat detection
+      -leverage microsofts dvanced threat hunting expertise
+      -uncover hidden threats that might evade traditional security solutions
+    improved incident response
+      -early detection allows for faster and more effective incident reponse
+      -minimizing potential damage and downtime
+    reduced security team burden
+      -proritized alerts help security teams focus their efforts on the most critical threats
+Eligible critetia and activation
+     MS defender -> settings -> endpoints -> advanced features -> Endpoint attack notifications (Apply and fill in email address submit)
+
+
+MS defender for endpoint :unmanaged devices
+  -not actively monitored and protected by your security solutions
+   personal devices(BYOD) Employee owned devices, tablets
+   smarphones used for work purposes
+  -IoT devices
+  -Legacy systems
+  -Rogue devices
+Unmanaged devices pose a risk
+  -unmanaged devices are like open doors for attackers
+  not up-to-date security software making vulnerbile to malware and exploits
+  missing security configurations leaving them exposed to misconfigurations and weakness
+  visibility and monitoring makes it difficult to detect suspicious activity or attacks
+Addressing unmanaged devices with MDE
+  -device discovery (identify unmanaged for visibility)
+  -onboarding : in MDE (install and configure agent) [onboarding by localscript,group policy,Intune])
+  -MS defender for IoT for devices that cant run the full MDE agent
+    MDE IoT
+  -segmentation:  of unmanaged devices from critical assets to limit ptential impact, enforce security policies and restrict access using NAC
+  -Monitoring and response : closely monitor for suspicious activity, use threat hunting capabilities to search for signs of compramise and repond quickly to detected threats to minimize damage
+Best practices 
+  -Develop a BYOD policy :clear guidlines for personal device usage in your org
+  -regularly update software [including unmanaged ones have the latest security patches and updates]
+  -educate users [security awareness]
+
+  
+  
+
+   
+
+
+
+
+
+
+
+
+
+
+  
           
 
 
