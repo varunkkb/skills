@@ -452,8 +452,39 @@ Best practices
   -regularly update software [including unmanaged ones have the latest security patches and updates]
   -educate users [security awareness]
 
-  
-  
+Unmanaged devices - Discovery setup
+MS defender portal -> settings-> device discovery-> discovery setup
+Basic discovery : well suited for small homogeneous networks with mostly domain-joined devices
+                  it leverages AD, discvers devices authenticated and registered with the domain
+                  provides a basic inventory of domain-joined devices
+                  limitations: dosent find devices outside the domain
+                  not discover personal devices (BYOD), servers disconnected in workgroup, cloud-hosted resources
+standard discovery: utilizes multiple methods to discover a broader range of devices
+                    AD , network scanning, Azure active directory integration
+                    AD leverages AD joined ,network scanning using protocols (SMB, SNMP,WMI), discovers personal devices,servers,IoT devices
+                    network scanning might be limited by firewall rules or protocols restrictions
+                    EntraAD integration identifies devices enrolled in entra AD , useful for org adopting cloud-bases resources and identities
+                    detects potental vulnerbilities Log4j, analyzes collected device information to identify devices running vulnerable software
+                    All devices option: compresnsive scanning: every compatible device running the defender for endpoint sensor becomes a scout and actively searching fr other devices on the network
+                    This will have increased traffic [higher volume of network compared to other methods, potential impact on network perfomance
+                    potential for false positives that you dont necessarlilt want [personal devices, IoT devices,guest machines]
+                    Select tags option: create custom tags in defender for endpoints , assign to specific devices [department,locations,device type,risk level]
+                    
+Best practices
+    regularly update tags, monitor performance [if using all devices scan option], reviwew dicovered devices [accuracy, and exclude any devices from future scans]
+
+device discovery - exclusions
+    -powerful tool to streamline your endpoint security managment
+    -by intenionally omitting specific devices or IP ranges from the dicovey process
+MS defender portal -> settings-> device discovery-> exclusions         
+            Add device name,IP address/range, Mac address
+important considerations
+    regular review
+    documentation
+    security impact [wont be monitored by MDE, assess rike before excluding devices]
+
+device discovery -monitoring networks
+-precise control over which network segment MDE scans ,this will optimize dicovery process
 
    
 
