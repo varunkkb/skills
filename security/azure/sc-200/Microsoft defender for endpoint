@@ -483,8 +483,55 @@ important considerations
     documentation
     security impact [wont be monitored by MDE, assess rike before excluding devices]
 
-device discovery -monitoring networks
--precise control over which network segment MDE scans ,this will optimize dicovery process
+Device discovery -monitoring networks
+  -precise control over which network segment MDE scans ,this will optimize dicovery process
+MS defender portal -> settings-> device discovery-> monitered networks
+  -MDE discovers network segments(subnets) automatically
+  -analyzes network traffic pattens to identify and categorize networks, detects network segments
+important considerations
+  -network topology awareness so that accuraely define the networls you want to monitor
+  -keep network updates as it changes/evolves adding new network segments
+  -ensure that any firewall rules or network restrictions do not interfere with defender for endpoint ability to scan the networks
+  -data residency carefully consider which networks you monitor to ensure compliance
+
+Device discovery - authenticared scans
+why authenticaed scans
+    -with standard device discovery methods, we only scratch the surface regarding the information they gather
+    -by utilizing valid credentials to access devices and collect additional data
+    -enhanced accuracy, vulberbility management, network device visibility, compliance requirments
+who should use auth scans
+    -need detailed information  (software vulnerbilities,configration details
+    -if complex networks (scan a variety of devices and OS)
+    -prioritize security extra layer of information previded by auth scans
+    -need to comply strict sompliane standards that require detailed device inventories and vul assessments
+MS defender portal -> settings-> device discovery-> authenticated scan (network device scan , windows auth scan)
+    scanning device
+    targets [import .csv
+    repeat time
+    select auth method [community string,NoAuthNoPriv, AuthNoPriv,AuthPriv]
+    community string:  A device sends a community string wih each request [plain text]
+    noAuthNoPriv (SNMPv3) this uses username adds layser of authentication but doesn't provide any encryption
+    AuthNoPriv (snmpv3) usees username and pass for auth , hashed MD5 or SHA1 lacks encryption
+    AuthPriv most secure method uses username,auth protocal ,auth pwd, privacy protocal,privacy pwd this provides both strong auth and confidentiality
+key takeaways
+    which method to use depends on the device capabilities, security reqirements, sensitivity of the data being transmitted
+    recommended to use AuthPriv
+    
+Unmanaged devices protection
+    device discovery,risk assessment, threat protection, conditional access
+how to setup
+    enable device discovery, configure network scanning, set risk profiles,apply policies
+Best practices
+    educate users,contactors, vendors security guidelines
+    ensue guest wifi is segmented from the internal networks to minimize risk
+    enforce policies imlement strong securiyt policies governing the use of unmanaged devices
+    monitor and address suspicious activity
+
+
+
+
+
+
 
    
 
