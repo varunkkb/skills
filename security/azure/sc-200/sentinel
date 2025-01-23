@@ -6,12 +6,12 @@ https://thinktechpro.com/microsoft-sentinel/
 https://github.com/SlimKQL/Hunting-Queries-Detection-Rules
 https://github.com/vasanth-z/Azure-30-days-challenge/blob/4f9f64b9d0e973ede3e97b151c460d65a21c4e37/README.md
 https://www.kqlsearch.com/
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Job description
 
-Cribl
-https://techcommunity.microsoft.com/blog/microsoftsentinelblog/using-cribl-stream-to-ingest-logs-into-microsoft-sentinel/4179790
+Cribl   https://techcommunity.microsoft.com/blog/microsoftsentinelblog/using-cribl-stream-to-ingest-logs-into-microsoft-sentinel/4179790
 
 Azure Sentinel architecture
-
 Splunk
 Data factory
 Crible
@@ -39,3 +39,266 @@ Create process documentation related to Azure Sentinel.
 Collaboration and Support
 Provide an escalation point for the SOC team to consult and rely on the candidate’s technical knowledge base.
 Work collaboratively with team members and stakeholders, clearly and proactively communicating work status, key issues, and risks to management.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Micorosft sentinel
+    -sentinel is SIEM and SOAR solution
+    -Intelligent clou-based security
+    -sentinel operates entirely within MS azure
+    -it boasts quick deployment without complex infrastructure setups
+    -buit-in AI and ML to enhance security
+SIEM capabilities
+    -log collection [infrastructure sources,users,devices,apps,cloudservices,etc]
+    -detection and analytics [advanced analystics and correlation rules]
+    -visualization [provide intuative dashboards]
+SOAR capabilities
+    -incident response [swift investigation with contextual data]
+    -automation [playbooks to handle tasks saving time]
+Key benifits
+    reduced complexity
+    enterprise visibility
+    threat intelligence [identifies known and emerging threats]
+    proactive hunting [actively search]
+    scalability [grows with org needs]
+    integration [works seamless with microsft and third-part tools]
+consider MS sentinel if
+    -cloud-based solution, no infrastructure managment required
+    -enhances threat detection and incident response capabilities
+    -scales with evolving security requirments
+    -seamless solution
+
+workspace
+-central hub for security data ingestion , analysis and operations managment
+workspace planning 
+  -data source planning      
+           log sources: identify log sources for comprehensive security visibility (devices,apps,cloud services,firewalls,etc)
+           connectors :determine built-in or custom connectors for gathering log data into sentinel
+  -number of workspaces
+       single workspace
+              cetrilizes all data for analysis and investigation
+              simplifies permission managmemnet
+              ideal for data residing in a single location
+       multiple workspaces
+              geograpic distribution ofdata sources
+              strict complicance requirments for data isolation
+              accessrstriction for different security teams
+  -workspace design
+      log analytics workspace creation
+            establish a new log analytics workspace in azure or connect sentinel to an existing one
+            foundation for string and analysing security data
+      retention periods
+            define data retention timeframes to balance security needs with cost optimization
+      analytical rules
+            develop tailored analyticsl rules for proactive threat detection aligned with org security requirments
+      workbooks
+            create custom workbooks (interactive dashboards) for threat visualization and monitoring various aspects of security posture
+key consideraions 
+    data sensitivity and compliance 
+        identify gegraphical and regulatory needs for data handling 
+        consider impact on workspace location and seperation
+    team structure and access
+        Align workspaces with security teams reponisbilities
+        Define access level required for effecive monitoring and response
+    cost optimization
+        balace security monitoring with efficient data retention to manage sentinels usage-based pricing
+        implement strategies to optimize cost while maintingning cpmprehensive security
+     log ingestion strategy
+        design methods for collecting logs from custom data sources
+        ensure logs are directed to appropriate workspaces for analysis and action
+important notes
+    merging workspaces post-creation is not feasible
+    while quering multiple workspaces may impact performance
+Microsoft sentinels dependence on log analytics 
+    foundation ofsentinel's operations 
+    primary source and storage of security data
+    utilizes kusto query language (KQL) for analytics and investigations
+
+Microsoft Sentinel : Overview of built-in connectors
+   connectos act as bridge linking Micorsoft sentinel to various data soruces
+      Entra ID and Office 365
+      third party security solutions
+      improve your orgs security controls
+   automate the collection security-related
+      logs,events,alerts
+   channel data into sentinel for analysis and threat detection
+why bult-in connectors matter
+    microsoft sentinel offers a vast array of built-in connectors
+    it makes it incredibly easy to start ingesting data from your most critical sources
+    these connectors are preconfigrured, dont have to build complex integrations from scratch
+        seltect the connector you need
+        follow a few configuration steps
+        data starts flowing into your sentinel workspace
+benefits of built-in connectors
+    -simplified step 
+          streamline the onboarding process
+          get data into sentinel quickly
+    -data normalization 
+           ensure consistent formatting of data from different sources
+           facilitate easier correlation and analysis
+     -rich data schemas
+           predefined schemas enhance sentinels understanding of data structure
+           improve  analytical capabilities
+     -regular updates
+            MS keeps coneectors up-to-date
+            Ensure compatibility with the latest versions
+common use cases
+      MS entra ID
+            detect unusual login patterns
+            identify potential compramised accounts
+            monitor privilege esclation
+       MS 365
+            monitor email security
+            track phishing campaigns
+            identify suspicious file activity
+       defender for cloud
+            ingest security alerts and recommendations
+            centralize security monitoring and reponse efforts
+      threat Intelligence platforms
+            integrate thereat feeds
+            enrich security data 
+            improve threat detection capabilities
+best practices
+         choose wisely 
+              select connectors align with your organization specific security needs
+              monitor the data sources    
+         optimize data collection
+              fine tune data collection settings
+              avoid ingesting unnecessary data to manage cost and performance
+         monitor connector health
+              regulaly review connector logs
+              enure connectors function correctly
+              address any potential issues promptly
+beyond built-in: custom connectors and API integration
+          Microsoft sentinal allows create cutom connects
+          leverage sentinel's API to integrate with virtually any data source
+          tailor sentinel to meet unique security requirments
+
+Microsoft sentinel - built-in connectors
+MS sentinel -> configuation : data connectors [installed connects]
+MS sentinel -> configuation : content hub [for more connectors]
+each wil have have content type: analytics rule, data connectors, hunting query,workbooks, parser
+
+Microsoft Sentinel : Content Hub - Demo
+MS sentinel -> configuation : content hub
+      the content hub is one-stop shop for curated content designed to superchage your sentinel implementation
+      vendors like: microsoft, security partners, broader community  providers
+      solutions:354 , standalone contents:275, installed:4, updates:0
+content hub
+    analytical rule: pre-built customizable rules generate alerts based on specific events or patterns
+    hunting queries: powerful queries to proactively search for threats and anomalies in your data 
+    parser, workbooks,hunting queries
+
+Bascs of kql 
+-KQL is specialized dialect that allows fluent interaction with your security data
+-it is a read-only language, use it to retrieve and analyze the information stored in databases or logs
+-filter relevent information and transform raw data into actionable intelligence
+KQl pivotal role in MS sentinel
+  -proactive threat hunting
+  -rapid incident investigation
+  -tailored alerts
+  -insightful reports and dashboards
+KQL pipeline struture
+    -KQL queries follow a strutured pipeline
+    -data enters the pipeline from a series of transformations
+    -each operation refines the data further
+  Data source: logs
+  Operators :filters, project,aggregate, modify
+  output: table or visualization
+KQL operators and functions
+    filtering (where) : extract specific rows based on conditions
+    projecting(project): select specific coloumns to include
+    summarizing (summarize): aggregate data to find patterns and trends (sum,averages,counts,others)
+    joining(join): combine data from multiple tables,to coneect different piences of information for comprehensive view
+    sorting(sort): arrange results in alogical orders
+    limiting(limit) : restrict the number of displayed results, preventing data overload
+    scalar operators and functions
+        arthmetic(+,-,*,/,%),comparison(==,!=,>,<,>=,<=),
+        logical (and,or,not),
+        string(has, contains,  
+        startswith,endswith),
+        aggregation (count(),avg(),min(),max()),
+        scalar(convert data types,extract substrings,trim whitespace)),
+        time(timestamps,time diffences, group events by time intervals)
+Pratical examples
+    SecurityEvent
+    |where TimeGenereated > ago(24h) and EventID == 4624
+
+    SecurityEvent
+    |summarze EventCount =count() by EventID
+    |top 10 by EventCount dec
+    
+Microsoft Sentinel : Key commands for filtering, joining tables
+-time based filterting [TimeGenerated filed and ago() function]
+wildcard and regular expressions
+    broaden search criteria or find partial matches
+    KQL offers wildcards(*,?) and regular expressions
+    SecurityEvent
+    |where AccountName matches regex @"\badmin\b"
+joining tables
+    combine information from different sources
+    left outer join, inner join, right outer join, full outer join
+    inner join: cmbines rows from both tables only when there's a match 
+    left outer join: returns all the rows from the left table and matched rows from right table
+    right outer join returns all the rows rom the righ table and matched rows rom the left table
+    full outer join returns all the rows from both tables fills in null value if no match
+
+Microsoft Sentinel : How KQL is specifically used in Sentinel
+1. log analytics
+      microsot sentinel is built upon azure monitor log analytics a powerful log management and analystics platform
+      KQL is teh native query language for log analytics
+2 threat detection
+      KQL enables to create custom alaytics rules can trigger alerts when specific threat or anomalies detected in your data
+3 threat hunting  
+      KQL empowers  proactive threat hunting 
+      eanbling to scraft sophisticated queries to search for indicators of compramise (IOCs) or subtle patterns of malicious behavior
+4 incident investigation
+      KQL allows you to quickly investigate the root cause of security incidents to race the attacker's actions and assess impact
+5 reporting and visualization
+      generate reports and interative dashboards
+6 automation and playbooks
+      kql can be integrated with Azure logic apps to create automated workflows and playbooks that automatically repond to security events in real-time
+      
+Real-world applications of KQL in sentinel
+  -detecting brute-force attacks
+  -uncover lateral movements
+  -track data exfiltration
+  -monitoring cloud resouce configurations
+
+Microsoft Sentinel : Analytics Rules Overview
+analytical rules are queries written in kusto query language(KQL)
+continuously scan your incoming security data
+-proactive threat detection
+-customizability
+-automation
+-integration with playbooks
+types of analytical rules 
+    scheduled rules : run on defined schedule
+    MS security rules: Pre built rules created by MS security experts
+
+Microsoft Sentinel : Investigating incidents, entities, and timelines - Overview
+incidents : an incident is a collection of related alerts and entities that together tell a story about a potential security breach
+inestigating an incident  
+      select an incident
+      review incident details
+      explore the timeline
+      invesitgate entities
+      analyze alerts
+      add bookmarks
+      collaborate
+Pro tips
+      start with hypothesis
+      look for anomalies
+      follow the breatcrumbs
+      pivot on IOCs
+      leverage the threat intelligence
+
+Microsoft Sentinel 
+        Investigating incidents,
+        entities
+        incident timelines
+
+Microsoft Sentinel : STIX/TAXII feeds
+Enhanced threat detection
+
+
