@@ -527,6 +527,80 @@ Best practices
     enforce policies imlement strong securiyt policies governing the use of unmanaged devices
     monitor and address suspicious activity
 
+unmannaged device protection - demo
+  MDE -> assets / devices-> list [on boarding status (can be on boarded)]
+  device->overview, incidents and alerts, timeline, security recommendations, inventories, discovered vuls, security policies, advanced features
+  devices inventory -> computers and mobiles, network devices, IoT devices, Uncategorized devices
+
+
+Managing Remediations in MDE 
+   remediation : corrective action taken in response to secuity alets or incidents
+                    quaritnien/removing malicious files
+                    killing/stopping malicious processess
+                    Isolating devices, deploying patches or updates
+                    resetting user pwds
+                    restoring files from backups
+MDE remediation capabilities
+      Automated remediation: predefined rules or policies [configure MDE to auto remediate]
+      manual remediations: through portal
+      Live response : connect to an affected device remotely and execute commands in real-time
+      Remedation history : keeps a detailed record of all remediation actions, audit trail
+      MDE integrates with SIEM and SOAR this automates remediation workflows across security ecosystem
+      
+Best practices for managing remediations
+    Establish clear policies and procedures to outline steps for responding to different types of threats and incidents
+    before deploying test your automated remediations in a contained environment
+    prioritze critixal assets : focus remediation efforts on the most critical assets and systems first so that your crown jewels are protected
+    regularly review and update polices and procedures
+    monitor effectiveness identify area for improvement and optimize response strategies
+    
+Managing remediations - demo
+MDE->Investigations and response-> incidents ,alerts
+    device overview, incidents and alerts, timeline, security recommendations, inventories, discovered vuls, missing Kbs, security policies
+    device options on right : set criicality, run antivirus scan, collect investigation package, initiate live response session, isolate device
+MDE->endpoints-> vulnerbility managment->recommendations [select oneor multiple and request remediation [sotware update/uninstall/attentiaon required, due date,priority] and assign]
+               above will be visible in->remediations
+
+Defender vulnerbility management
+  comprehensive solution for discovering , assessing, prioritizing, remediating vulnerbilities
+  applies to enpoints, servers,cloud workloads
+key capabilities and benifits
+       continous discovery
+         constantly discover and monitor assets : operating systems, applications, configurations
+         ensure visibility of the attack surface and potential vuls
+      intelligent assessment
+         uses micorsots threat intelligence and machine learning to assess the severity and potential impact
+         prioritize based on exploitability, prevalence,potential bussiness impact
+      risk based prioritzaion
+         provides score for each vul so to focus on most critial ones first
+      built-in remediation tools
+          deploying patches,hardening configs, mitiating configs
+      seamless inegration  
+          MDE , MS sentinel
+How Defender vulnerbility managment works
+      discovery: combines agen-based and agentless scanning
+      assessement: assesses severity and risk using threat intelligence , ML
+      prioritze vuls based on risk
+      remediation using built-in tools to efficiently remediate
+      reporting to track progress, measure remediation effectiveness
+      demonstrate compliance
+who can benifit 
+    security teams
+    IT teams
+    compliance team
+
+Defender vulnerbility management -demo
+  MDE->endpoints-> vulnerbility managment->dashboard (realtime security posture, vulnerbiltites,severiety, progress)
+  MDE->endpoints-> vulnerbility managment->recommendations
+
+Microsoft Defender for Endpoint : Device Timeline tab- Demo
+    timestamp, event,additional information(TTP), device/user
+    file activity, process activity[process creatiin ,termination,network connections,visible in the timeline],network connections [inbound/outbount connections,DNSlookups,network activity], registry changes,user logins
+    
+Microsoft Defender for Endpoint : Live Response - Demo
+  MDE->Investigations and response-> incidents ,alerts-> select device options live response section
+  will estabish secure remote shell connection, can upload file option,command console can run commands
+  check out commands that MS have provided that can be executed
 
 
 
