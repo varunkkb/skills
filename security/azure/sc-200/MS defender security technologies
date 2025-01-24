@@ -5,12 +5,97 @@ micorsoft defender family
   micorosft defender for cloud: assess security posture of cloud resources,identifies misconfiguratins and vulnerbilities, protects workloads
   
   MS defender for endpoint plans 
-    plan 1 - core endpoint protection capabilities
-             antivirus
-             threat and vulnerbility managment
-             attack surface reduction
-    plan2 - Includes all features of plan 1
-             automated investigation and response 
-             
+        plan 1 - core endpoint protection capabilities
+                 antivirus
+                 threat and vulnerbility managment
+                 attack surface reduction
+        plan2 - Includes all features of plan 1
+                dvanced threat hunting 
+                automated investigation and response 
+                endpoint detection and response capabilities
+   miscorsot defender for individuals
+          safeguards your personal devices (upto 5 oer user)
+          malware, phishing, online threats
+          real-time security notifications and alerts
+          tips and recommendations to stay safe online
+
+
+  Microsoft Defender for Cloud   
+          comprehensive cloud security solutions
+          combines multiple capabilities Azure,Aws,google cloud, hybrid envs
+          it acts as a central hub for 
+                        monitoring 
+                        assessing
+                        improving your cloud security posture
+          provides advanced threat protecton for workloads
+          key features
+          CSPM -cloud security posture managment
+                continous assessments : assess coud resources against best practices and industry standards
+                             misconfigurations , vulnerbilities ,compliance issues
+                Risk prioritization: prioritizes risk based on severity and potential impact
+                compliance monitoring : tracks compliance with regulatory standards and frameworks
+                              CIS, NIST, PCI-DSS
+                secuirty recommendations
+                             provides actionable recommendations to remediate security issues
+          CWP- cloud workload protection
+                threat detection: uses advanced threat intelligence and machine learning
+                       detects and alerts suspicious activites and potential attacks
+                vulnerbility assessment :scans VM and container images for vulnerbilities
+                identiefies and patches vulnerbilityes before exploitation
+                Just-in-tine VM access :reduces attack surface by allowing limited -time access to VMs
+                adaptive application controls: defines allowlist of trustes applications
+                                               blocks unauthorized applications on virtual machines
+          devops 
+                secure devops : integrates with devops pipelines
+                                identifies and remediates security issues early in the development
+                 IaC infrastructure as code scanning : It scans for IaC templates for security misconfigurations
+                                                       prevents vulnerbilities in the environment
+                                                       nsures security of containerized applications
+     Microsoft Defender for Cloud Apps
+          key features and benifits
+              Shadow IT discovery
+                        uncovers unsanctioned cloud apps employees might use without IT's knowledge
+                        assessses potential risls
+                        enforces security policies
+              Real-time monitoring and controls
+                        granular insights into user activity wihin cloud apps
+                              monitors user actions
+                              detects anomalous behaviour
+                              enforces policies in real-time
+                                        prevens data leaks
+                                        unauthorized access 
+              threat protection     
+                        advanced threat detection and mechanisms
+                        identifies and blocks malware,ransomeware,phishing attempts, others
+              data loss prevention(DLP)
+                        policies to prevent data leakage
+                        controls sharing and movement of sensitive information within and outside the org
+              compliance :maintains compliance with various regulatory standards and data  privacy regulations
+          how does defender fo clud apps work
+              discovery : seamlessly integrate with existing infrastructure to discover and catalog all cloud apps in use
+              monitor: continouslt monitor user activity analyses traffic patterns, file uploads, downloads, ohter interations and policy viloations
+              control: create and enforce granular policies : controls access, sharing , data movement ensuring your data remains pritected
+              protection: uses ML and therat intelligence detects and blocks sophisticated attacks
+                          malware,uploads,phishing attempts,unauthorized access attempts
+          why choose defender for apps
+              comprenhesnive visibility
+              real-time protection
+              data loss prevention
+              compliance assureance
+              ease of use
+
+              
+                        
+
+
+          
+            
+
+
+           
+
+
+
+        
                
 
