@@ -298,7 +298,65 @@ Microsoft Sentinel
         entities
         incident timelines
 
-Microsoft Sentinel : STIX/TAXII feeds
-Enhanced threat detection
+Microsoft Sentinel : STIX/TAXII feeds in microsoft sentinel
+    Enhanced threat detection
+        ingesting threat intelligene from various sources ehnance seninel's ability to detect and alert known threats
+        proactively identify and respond to potential attacks before they cause damaga
+    Rich contextial information    
+        STIX feeds often include detailed contexual information about threats 
+                attack desc
+                motivations
+                recommaended mitgation strategies
+        this encriched info aids in invesitgations and response efforts
+    community collaboration
+        STIX/TAXII is widely adopted 
+        enabling access to avast network of threat intelligence providers and communities
+    cutomization
+        tailor threat intellgence intake by selecting specific that align with your org
+        Industry,geography,threat profile
+How does STIZZ/TAXII feeds work in MS sentinel
+        connector acts as a bridge between sentinela and external TAXII servers that host STIX feeds
+        configuration requires the TAXII server API root and collection ID
+        Data inegestion :once configued senttinel peiodically polls the TAXII server
+        retriesves STIX indicators and ingest them into its threat intelligence database
+        correlation: setinel correlates ingested indicator with security events
+        generates alerts if a match is found, enabling swift detection and response
+        seninel provides several ways to leverage the ingested threat intelligence
+        threat intelligence blade :central hub 
+                view, manage, analyze threat intelligence feeds
+        Analytical rules: can create custom analytical rules to leverage to detect specific IOC's or patterns of activity
+        hunting queies   : write KQL queries to proactively search for threats based on indicators from STIX feeds
+Microsoft Sentinel : Connecting to STIX/TAXII feeds - LAB
+Sentinel-> data connectors -> content hub-> serch TAXII
+install,connect workspace, configure requires TAXII server API user (cisco, RSA, other)
 
+Intraducing playbooks(Logic Apps)
+    Automated workflows  assist you in streamline incident response
+    ensures consistent actions against security threats
+Playbooks
+    playbooks in MS sentinel are based on azuere logic apps
+    logic apps is a cloud-based service for creating and automating worflows
+    playbooks are predefined sequences of actions triggered by specific security alerts or incidents
+    automate tasks that woruld otherwise require manual intervention
+    notifying relevent personnel: send emails, sms messages, alerts to the security teams or stakeholders
+    enriching data gather the data from threat intelligence feeds or user directories
+    taking remediation actions : isolating compramised hosts,blocking malicious IP addresses, disabling compromised accounts,
+    integrating with external sustems :ticketing systems,SOAR platforms, other security tools
+Why playbooks matter ?
+    playbooks are indispensable for modern security operations center(SOCs) because they offer several key advantages
+            faster response, consistency, reduced human error,scalability, integration
+Anatomy of a playbook        
+        Trigger 
+                the event or condition that initiates the playbook
+                specific security alert or the creation of a incident
+        Actions
+                the sequence of tasks or steps the playbook executes when triggered
+                sending an email, running a KQL query, interacting with an external API
+                interacting with an external API
+        Conditions(optional)
+                logic statements that determine whether certain actions should be executed based on specific criteria
+building your first plabook
+    prebuilt playbook templates
+    create custom playbooks
+    
 
