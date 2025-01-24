@@ -1,1 +1,35 @@
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Job description
+
+Cribl   https://techcommunity.microsoft.com/blog/microsoftsentinelblog/using-cribl-stream-to-ingest-logs-into-microsoft-sentinel/4179790
+
+Azure Sentinel architecture
+Splunk
+Data factory
+Crible
+ELK
+
+Design
+Design and manage the Microsoft Sentinel SIEM platform to monitor and analyze security events and logs.
+Configure and customize SIEM rules, alerts, and reports.
+Develop incident response use cases using Logic Apps in Azure.
+Build high-confidence correlation using automated workflows based on various sources and use cases.
+Leverage Threat Intelligence feeds in Sentinel analytics and SOAR.
+Integrate security logs into Azure Log Analytics Workspace.
+
+Deployment
+Deploy and grow the customer’s Azure environment, collaborating with infrastructure and application teams.
+Logging and auditing cloud infrastructure with Azure Sentinel and orchestration efforts.
+Leverage security infrastructure to build automated workflows.
+
+Management and Maintenance
+Maintain and enforce the Azure Sentinel technology and related operational processes to adequately protect assets and customer data.
+Continuously assess data coverage and identify areas for improving Azure Sentinel.
+Develop remediation recommendations for findings where automated actions have not yet been applied.
+Create process documentation related to Azure Sentinel.
+
+Collaboration and Support
+Provide an escalation point for the SOC team to consult and rely on the candidate’s technical knowledge base.
+Work collaboratively with team members and stakeholders, clearly and proactively communicating work status, key issues, and risks to management.
+
