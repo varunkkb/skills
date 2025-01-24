@@ -1,46 +1,3 @@
-https://media.licdn.com/dms/document/media/v2/D561FAQEhuK8UxJCwzg/feedshare-document-pdf-analyzed/B56ZRof3MjGQAg-/0/1736920012487?e=1738195200&v=beta&t=d4pdCm4yzFHkwVbMciusyKqoXrJpJM5mHFcBK4bMI30
-https://medium.com/@abdullateefoni/estimating-microsoft-sentinel-costs-understanding-key-components-02ac92f3cf1c
-https://blog.moderncloud.ca/2025/01/05/automation-rules-to-automatically-isolate-mde-device-using-sentinel-playbooks/
-https://ryanperr.in/2024/06/17/microsoft-sentinel-azure-lighthouse/
-https://thinktechpro.com/microsoft-sentinel/
-https://github.com/SlimKQL/Hunting-Queries-Detection-Rules
-https://github.com/vasanth-z/Azure-30-days-challenge/blob/4f9f64b9d0e973ede3e97b151c460d65a21c4e37/README.md
-https://www.kqlsearch.com/
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Job description
-
-Cribl   https://techcommunity.microsoft.com/blog/microsoftsentinelblog/using-cribl-stream-to-ingest-logs-into-microsoft-sentinel/4179790
-
-Azure Sentinel architecture
-Splunk
-Data factory
-Crible
-ELK
-
-Design
-Design and manage the Microsoft Sentinel SIEM platform to monitor and analyze security events and logs.
-Configure and customize SIEM rules, alerts, and reports.
-Develop incident response use cases using Logic Apps in Azure.
-Build high-confidence correlation using automated workflows based on various sources and use cases.
-Leverage Threat Intelligence feeds in Sentinel analytics and SOAR.
-Integrate security logs into Azure Log Analytics Workspace.
-
-Deployment
-Deploy and grow the customer’s Azure environment, collaborating with infrastructure and application teams.
-Logging and auditing cloud infrastructure with Azure Sentinel and orchestration efforts.
-Leverage security infrastructure to build automated workflows.
-
-Management and Maintenance
-Maintain and enforce the Azure Sentinel technology and related operational processes to adequately protect assets and customer data.
-Continuously assess data coverage and identify areas for improving Azure Sentinel.
-Develop remediation recommendations for findings where automated actions have not yet been applied.
-Create process documentation related to Azure Sentinel.
-
-Collaboration and Support
-Provide an escalation point for the SOC team to consult and rely on the candidate’s technical knowledge base.
-Work collaboratively with team members and stakeholders, clearly and proactively communicating work status, key issues, and risks to management.
-
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Micorosft sentinel
     -sentinel is SIEM and SOAR solution
@@ -358,5 +315,72 @@ Anatomy of a playbook
 building your first plabook
     prebuilt playbook templates
     create custom playbooks
-    
+
+use cases for automated remediation tasks
+    -malware containment
+        high-severity alert for a malicious file detected on an endpoint
+        automation remediation
+            isolate endpoint prevent lateral movement
+            initiate antivirus scan: identify and remove malicious files
+            quarantine files automatically handle suspicious files
+    -phishing response
+        detection of a phishing email tageting multiple users
+        automated remeditaion    
+            delete phishing emails remove from all malilboxes
+             block sender and URLs add to block lists
+             educate users notify and remind about phishing red flags
+     
+      -suspicious login activity
+         multiple failed login attempts from an unusual location
+         automated remediation
+             block IP address prevent futher attempts
+             reset user passwords secure the compromised account
+             require MfA add an extra layer of security
+      -cloud misconfigurations
+         misconfigured cloud resource exposing sensitive data
+         automated remeiation    
+             revoke public access ensure a authorized acceess only
+             modify security groups restrict unauthorized traffic 
+             notify resource owner inform the misconfiguration and action taken
+      -anomaly detection
+          unusual traffic patterns or behaviour detected
+          automated remediation    
+                investigate automatically collect additional information
+                generate alerts create high-priority alert for review
+                dynamically adjust basleline imprve future detection accuracy
+key considerations for automated remediation
+     careful planning test actions in a non-pro environment
+     granular controls use conditional logic and filters
+     logging and auditing track actions for accountability
+     human oversight maintain review and intervention capabilities
+
+Microsoft Sentinel : Anomaly detection with built-in features
+    anomaly detection : technique to identify unusual or unexpected behaviour 
+    based on deviations from normal patterns
+    helps detect potential threats missed by traditional security tools
+    catches unknown threas 
+                identifies novel or unseen threats
+    detects insider threats
+                uncover misuse of access priveliges
+    uncovers hidden patterns
+                reveals subtle attack trends
+    reduce alert fatigue
+                focuses on truly unusual events
+
+MS setntinel built-in anomaly detection features
+    user and entity behaviour analytics (UEBA)
+        builds behaviour profiles for users and entities
+        analyzes rela-time activity for deviations
+    macine learning-based anomalies
+        uses machine learning algorithms to detect subtle patterns
+        cutomizable anomaly detection rules
+    fusion engine
+        correlates alerts from multiple sources
+        surface high-fidelity incidents and reduce false positives
+leveraging aomaly detection in MS sentinel
+    enable UEBA : activate UEBA in your sentinel workspace
+    review bult-in anomaly detection rules :explore preuilt rules for various scenarios
+    create cusotm anomaly detection rules
+    Monitor alerts : regularly review and investigate anomaly alerts
+    refine your rules continously fine -tune rules for accuracy and effectiveness
 
