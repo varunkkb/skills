@@ -61,8 +61,53 @@ MITRE ATT&CK
       take action  
                   confirmed threats isolate system , Block IPs, patch vulnerbilities
       
-          
+Threat Hunting Queries          
+            specilized searches designed to proactively identify potential threats or malicious acttivities within your environemnt
+            not triggered by alerts 
+            Actively initite to seek out patterns, anomalies,IOCs
+    Kusto query languate (KQL)
+                In MS sentinel, threat hunting queries are typically written in KQL
+                powerful and flexible language enables you to search through massive amounts of data, filter relevant events, aggregate information, uncover hidden relationships
+    why threat hunting queries matter?
+        practive defense
+        uncover hidden threats
+        validate suspicions
+        continuously improve security
+    Crafting effective threat huntng queries
+            building effective threat huning queries requires
+                   combination of creativity
+                   technical expertise
+                   deep understanding of your environment
+            hypothesis-driven approach
+                   start with a hypothesis about a potential threat or attack scenario
+                   based on  threat intelligence, industry trends, observaions
+            Identif relevant data sources
+                   log sources and data types within MS sentinel
+                   these are most likely to contain evidence of the threat you're hunting for 
+            use the MITRE att&CK framework 
+                    to guide query development by map hypotheses to specific tactics and techniques
+                    identify corresponding data sources and events
+            construct KQL queries 
+                    search for specific IOCs or behaviour patterns associated with your hypothesis
+            Iterate and refine 
+                    Continously refine queries ased on the results
+                    adjust search criteria or explore different data sources if initial results are not as expected 
+     where to find threat hunting queries
+                MS senienl provide a variety of resources to help you get started with threat hunting queries
+        Threat hunting blade
+                section within sentinel offers a library of pre-built queries for startting point investigations
+         Github repositories
+                Many secuiryt researchers and organziazations share threat huntng queries on GitHub
+         securty communities
+                engage with other security professionals in online forums and communities
+                exchange ideas and collaborate on threat hunting projects
+    
+            
 
+            
+                
+            
+        
 
 
 
