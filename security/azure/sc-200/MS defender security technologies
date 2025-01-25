@@ -208,7 +208,7 @@ micorsoft defender family
                                                            risk level: high,medium,low
                                                            risk details: additional info explaining why the sign-in was deemed risky
                                 risky sin-in reports: user details,location,device,IP address, risk detections
-                           leveraging threat intelligence
+                      leveraging threat intelligence
                                     MS entra ID protection harness the power of threat intelgence to identify suspicious activities
                                     if a risk detection is triggered by threat intelligence, you can investigate further by analysing IP address, 
 
