@@ -179,9 +179,39 @@ micorsoft defender family
                            multi-cloud support                 
                                             CWOpritects workloads across multiple clouds  
 
+    Investigating Risk with Microsoft Entra ID Protection
+                importance of risk investigation
+                    vigilance in identity security is crucial
+                    continously monitoring your environment for suspicious activities and potential breaches
+                    when it detects risk : an unusual login pattern
+                                           compramised credential  
+                                           an anomalois user behaviour
+                    some risks might be harmless anomalies, while others could signal a ful-blown attack in progress
+                risk investigation
+                      process of examining these alerts 
+                          peeling back the layers
+                          determining the true natre of the threat
+                          by thoroughly investigating risks 
+                          validate alerts, understand the attack patterns, mitigate risks, enhance security posture
+                      Entra ID protecition dashboard
+                          access the essential tools and reports for your investigation
+                                risky sign-ins: lists sign-in flagges as isky due to suspicious activity
+                                risky users: highlights users with multiple risky sign-ins or detections
+                                             a user might be flagges as risky due to multiple risky sign-ins or risk detections not tied to a specific sign-in
+                                             risky user report provides valuable details 
+                                                          risk history[cronlogical timeline of events contributng to the users risk level]
+                                                          risk detections list of risk detections associated with the user     
+                                risk detections:  provides details on specific risk detections
+                                                  type,severity,associated user
+                                                  each detection
+                                                           risk type:  atypical travel, leaked credentials,anonymous IP address
+                                                           risk level: high,medium,low
+                                                           risk details: additional info explaining why the sign-in was deemed risky
+                                risky sin-in reports: user details,location,device,IP address, risk detections
+                           leveraging threat intelligence
+                                    MS entra ID protection harness the power of threat intelgence to identify suspicious activities
+                                    if a risk detection is triggered by threat intelligence, you can investigate further by analysing IP address, 
 
-
-                
                                          
                               
                               
