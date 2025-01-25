@@ -51,7 +51,7 @@ micorsoft defender family
                  IaC infrastructure as code scanning : It scans for IaC templates for security misconfigurations
                                                        prevents vulnerbilities in the environment
                                                        nsures security of containerized applications
-     Microsoft Defender for Cloud Apps
+    Microsoft Defender for Cloud Apps
           key features and benifits
               Shadow IT discovery
                         uncovers unsanctioned cloud apps employees might use without IT's knowledge
@@ -84,7 +84,116 @@ micorsoft defender family
               compliance assureance
               ease of use
 
-              
+      Microsoft Defender for Office 365
+               the challenge: modern threats to your digital workplace
+                   Micorosft 365 suite includes
+                        Exchange online, sharepoint,oneDrive, microsoft Teams
+                        these wide spread usage among companies
+                        threats go far beyod simple spam email, phisshing attacks,BEC, malware and ransomeware, zero-day attacks
+                the soilution: MS defender for office 365: multi-layered defense
+                        Defemder for office 365 is your multi-layered sheild against these advanced threats.
+                key components
+                       pre-delivery protection
+                              safe attachements : email attachments detonated in a secre sandbox detect and block malicious content before reaching inboxx
+                              sale links: dynamic scanning of URLs within emails when clicked,protects users from malicious websites
+                              Anti-spam ad anti-malware: Traditional filter block known spam and malware based on signature and patterns
+                              impersonaation protection: protects against spoofing and impersonattion attacks verfies sender authenticity
+                       post-delivery protection 
+                              zero-hour auto purge(ZAP):automatically removes malicious emails from inboxes post-delivery, prevents further harm
+                              safe links in office apps extends safe links protection to URls in office docuuments
+                                    word, excel,powerpoint
+                       threat investigation and response
+                              threat explorer: investigates and analyzes threats, searches for specific indicators of compramise (IOCs)
+                              automates investigation and response (AIR), saves valuable time for security teams
+                              campaign views: groups related attacks into campaigns, facilities easier analysis and response
+                              threat tracker: keeps informed about emergin threats, provides curated threat intelligence
+                      Attack simulation training
+                              simulate phishing attacks: trains employees to recognize and respond to phishing emails, improves overall security awareness
+                 defender for office 365 plans
+                      microsoft offers two distinct plans for defender for office 365
+                      plan 1 : core protection features
+                                   safe attachments, safe links , anti-phishing policies
+                      plan 2 : advanced capabilities
+                                   automated investigation and response
+                                   threat hunting
+                                   attack simulation training 
+                      
+  Policies & Governance with Microsoft Defender for Cloud Apps
+          policies and governance
+                policies : policies as the rules that govern how your users interat with cloud apps for example
+                            what actions are allowed
+                            whats prohibited
+                            what triggers alerts or actions
+                governance : overall framework of
+                             processes, roles, responsibilties
+                             ensures your policies are implemented effectively
+           why policies and governence matter?
+                 data protection : prevents unauthorized access, data leakage other breahces
+                                   controls ow data is shared , accessed,used 
+                 threat prevention: by enforcing policies 
+                                    detects and blocks suspicious activities malware uploads, unsual login patterns etc
+                 compliance assurance: adheres to reulatory requirments and industry standards
+                                      ensires appropriate handling of sensitive data
+                 improved security posture : enahances overall cloud security postiure
+                                            reduces risk of data breaches and cyber attacks
+           policy types in microsoft defender for cloud apps
+                  defender for cloud apps offers various policy types to address differrent aspects of cloud security
+                    activity policies : triggers alerts/actions based on user activities, uploading sensitive files to unsanctiones apps
+                    anomaly detection policies: identify unusual or suspicious behaviour, multiple fdailed login attempts, large data downloads
+                    file policies: pretcet sentitive files by controlling movement ,access,sharing 
+                    app discovery policies : identify and assess risk level of cloud apps used, allows to make informed decision
+          governance in microsoft defender for cloud apps
+                    app governance: control usage of Oauth-enables apps and their access to sensitive data
+                              microsoft 365, google workspace, salesforce
+                    conditional access app control
+                              apply real-time access controls ans session policies based on user identity, devices,loccation
+                    information protection
+                              integrate wih microsoft purview information protection
+                              apply sensitivity labels and encryption to sebsitive data in cloud apps
+
+    Microsoft Defender for Cloud Workload Protection
+            cloud workload includes : VMs, containers, databases, serverless functions
+                                      dynamic and constaly changing
+            distributed across multiple cloud environments
+            traditional security approches may not suffice for cloud environments
+            Cloud workload protection combines threat detection, vulnerbility assessment, adaptive controls                      
+            create alayered defense strategy for cloud assets
+            key capabilities and benifits
+                            threat detection: advanced threat intelligence securiy graph
+                                              detects known and emerging threats targeting workloads
+                                              machine learning and behavioral analyics identifies anamolies and suspicious activities
+                                              network layer protection monitors network traffic detects maliciou patterns and prevents intrusions
+                                              file intergrity monitoring (FIM)
+                                              tracks changes to critical system files and configurations alerts to unauthorized modifications
+                            vulnerability assessment
+                                              integrated vulnerbility scanner scans virtual machines and container images for vulnerbilties, miconfigurations, missing patches
+                                              priotitized recommendataions provides actionable recommendations based on severity and impact 
+                                              agentless scanning resuces overhed and simplifies deployment
+                            adaptive controls
+                                            just-in-time VM access temorarily opens access to VM only when needed reduces attack surface
+                                            adaptive app controls creates allow lists of trusted applications, blocks unauthorized software from running
+                                            fileless attack detection detects and blocks fileless attacks, evades traditional security measures
+                            unified secuity managment
+                                            centriized dashboard provides a unified view of security alerts, recmmendations , compliance 
+                                            integrated with microsoft defender for cloud seamlessly integrates with other defender for cloud capabilities
+                           multi-cloud support                 
+                                            CWOpritects workloads across multiple clouds  
+
+
+
+                
+                                         
+                              
+                              
+                              
+                              
+
+                              
+
+                                                
+
+
+        
                         
 
 
