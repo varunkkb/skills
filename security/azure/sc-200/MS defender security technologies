@@ -210,18 +210,42 @@ micorsoft defender family
                                 risky sin-in reports: user details,location,device,IP address, risk detections
                       leveraging threat intelligence
                                     MS entra ID protection harness the power of threat intelgence to identify suspicious activities
-                                    if a risk detection is triggered by threat intelligence, you can investigate further by analysing IP address, 
-
-                                         
+                                    if a risk detection is triggered by threat intelligence, you can investigate further by analysing IP address, researching anomalous activities
+                      Taking action and mitigating risks
+                                    dismiss the risk
+                                    confirm compromise
+                                    mark it for further investigation
                               
-                              
-                              
-                              
-
-                              
-
-                                                
-
+     Purpose of Azure Lighthouse
+          managing multiple sentinel workspaces at scale  
+          powerful cross tenent managment solution that can simplify and streamline this
+          many orgs have multiple Azure tenants or subscriptions, each with its own microsoft sentinel workspace
+          challenges:
+                    increased complexity : time-consuming and error-prone managment
+                    limited visibility: difficulty in gaining a unified security view    
+                    resource duplication: inefficient duplication of tasks [like analytical rules,playbooks]
+          Aure light house :  powerful cross tenent managment solution that can simplify and streamline this          
+             centralize managment: single view for multiple workspaces and streamlining operations
+                                   delegate acess: granular access conrol for specific users/groups
+                                    automate tasks: execute script and runbooks across workspaces
+            how azure lighthouse works with MS sentinel ?
+                      onboarding: onboard sentinel workspaces from differen tenents
+                      delegated access: grant access to users/groups in managing tenant
+                      centralized managment: manage alerts, incidents and rules from a single interface
+                      cross-workspace actions: perform actions across multiple workspaces [kql queries,creating work books, deplying playbooks]
+            benifits of using azure light house for sentinel managment
+                      simplified managment : reduce tenant and workspace switching overhead
+                      enhanced visibility : hoslistic view of security posure 
+                      improved efficiency: ale to streamline and automate taksks
+                      stronger scrutity: granular access controls and maintain data isolation
+                      cost optimization : avoid resources and effort duplication
+            use cases for azure lightouse and sentinel
+                      managed security service providers( MSSPs) : Efficiently manage multiple customers
+                      MNCs oversee golbal subsidiaries or regional officies
+                      large enterprises centralize security for complex, multi-tenant environments
+                      
+                      
+            
 
         
                         
