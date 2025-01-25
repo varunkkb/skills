@@ -1,4 +1,4 @@
-inThreat Hunting Services
+Threat Hunting Services
     threat hunting is a proactive cyberssecurity practice i involves actively searching for signs of malicious activity within your environment
       even when there are no specific alerts or indicators meticulously ecamine data for anomalies follow trails ofeidence
       uncover hidden thrats that might have evaded your traditional security controls
@@ -101,7 +101,7 @@ Threat Hunting Queries
          securty communities
                 engage with other security professionals in online forums and communities
                 exchange ideas and collaborate on threat hunting projects
-      Sentinel | hunting demo
+      Sentinel | hunting | queries demo
             
 MS sentinel livestream
         game chaner for security professionals allows running KQL queries against security data and 
@@ -121,17 +121,127 @@ MS sentinel livestream
                             enables automated alerting based on specific criteria within the query 
                             MS sentinel offers a library of prebuilt queries for common threat hunting scenarios
                             valuable starting point for leveraging livestream for proactive treat detection
+        Sentinel | hunting | livestream demo
         
-        
-        
-    
-        
-        
+ 
+  SOC efficiency workbook 
+                improved visibility
+                enhanced efficiency
+                demonstrated value
+           essential metrics for your workbook
+                incident management
+                        number of security incidents created 
+                        time to Triage (TTriage)
+                        time to resolution (TTR)
+                        incident resolution rates by severity or category
+                 alert management
+                        number of security alerts generated 
+                        numer of false positives
+                        true positive rates    
+                Analyst activites
+                        number of incindets investigated per analyst
+                        average time spent on incident investigation
+                        training completion rates
+                SOC efficiency workbook - Demo
+          sentinel -> incidents -> security operations efficiency tab
+          maximizing impact of securiy efficiency workbook
+                    schedule regular reviews 
+                    periodic reviews
+                        set aside time with your security team
+                        discuss trends and identify bottlenecks
+                        brainstorm solutions for improvement
+                    actionable insights
+                        concrete actions
+                                   translate insights into actions 
+                                   streamline workflows 
+                                   refine detection rules
+                                   mplement new security tools
+                    emrace change
+                        culture of continuous improvement
+                        adapt SOC operations based on data-driven insights
+                        encourage flexibility and adaptabilty
+                    evolving metrics
+                        regular evaluation
+                                security threats and SOC needs constantly evolve
+                                evaluate and adjust metrics regularly
+                                add or remove metrics as necessary
+                    
+Hunt with a Search Job 
+        what are search jobs, and why do they matter?
+            imagine you're a detective investigating a complex case seach jobs efficiently search through vast amount of data
+            uncover hidden clues subtle indicator of compramis, search jobs seach across long periods and massive datasets even stored in archives
+            crucial for investigations spanning weeks, months or years
+        when to use search jobs?
+            long-term nvestigation
+                    analyze past security events
+             large datasets
+                    overcome timeouts and resource-intensive queries
+             proactive threat  hunting 
+                    look for signs of compramise without specific alerts
+         how search jobs work ?
+             operate differntly from reqular queries
+             run in the background asynchronously once completed results stored in a special table in log analytics workspace
+             access and analyze results using standard KQL queries
+         Key benifits of search jobs
+             efficiency : run in the background, freeing workspace resources
+             performance : leverage parallel processing for quick scans
+             flexibility: customize search criteria with KQL
+             realiability: persist even if connection is lost
+             archiving: access archived data not available through regular queries
+        tips for effective serch jobs usage
+                 start with hypothesis
+                         formulate a clear hypothesis about the threat or activity
+                 refine your query
+                         use KQL filtering and aggregation capabilities
+                monitror resource usage
+                        avoide impacting sentinel workspace performance
+        sentinel -> search -> search bar
+            
+            
+Hunt for threats using notebooks
+        personal securiy research lab within MS sentinel
+                code,rich text, visualizations, ML models
+        create comprehensive threat hunting investigations
+        flexible canvas for sxploring 
+                seacurity data, testing hypotheses,building custom tools
+        why notebooks for threat hunting?
+                flexibility and cutomization
+                        tailor analysis to specific needs and hypotheses
+                        create cusotom workflows
+                powerful analytics 
+                        leverage machine learning and data science tools
+                        perform in-dept analysis beyond basic KQL wueries
+                visual storytelling 
+                        seamlessly integreate code,data, visualizations
+                        create compelling narratives that clearly and e◙2fectively communicate findings
+                collaboration
+                        share notebooks with colleague for peer review, collaboration, knowledge sharing
+         hypothetical scenario
+                hypothesis
+                        suspect a potential phishing campaign targeting your org
+                data source
+                        focus on email logs from MS 365 and security events from your endpoints protection solution
+                notebooks workflow 
+                        data ingestion, data cleaning and transformation, analysis, threat detection, investigation and response
+                        data injection :use KQL o pull relevant data from the officeActivity and securityEvnt tables into your notebook
+                        data cleaning and transformation : clean up the data , remove duplicates,format it for analysis
+                        analysis : utilize python librarie like pandas and matplotlib , analyze email patterns, identify common senders or doamins and visualize te results
+                        threat detection : apply ML algorithm to classify email as potentially malcious or benign based on various features 
+                        investigation and response: deep dive into suspivious emails, track user interactions and take appropriate actions
+                additional tips
+                    experiment with different queries to hunt for various threat scenarious
+                    leverage the MITRE ATT&CK framework to guide your search queries
+                    use time picker to adjust the time range 
+                    explore the saved searches tob to view and manage all search jobs
+                    collaborate with your team and share search job results for comprehensive threat analysis
 
-            
-                
-            
-        
+
+
+
+
+
+
+
 
 
 
