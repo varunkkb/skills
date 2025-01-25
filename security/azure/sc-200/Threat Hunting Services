@@ -1,4 +1,4 @@
-Threat Hunting Services
+inThreat Hunting Services
     threat hunting is a proactive cyberssecurity practice i involves actively searching for signs of malicious activity within your environment
       even when there are no specific alerts or indicators meticulously ecamine data for anomalies follow trails ofeidence
       uncover hidden thrats that might have evaded your traditional security controls
@@ -101,8 +101,32 @@ Threat Hunting Queries
          securty communities
                 engage with other security professionals in online forums and communities
                 exchange ideas and collaborate on threat hunting projects
-    
+      Sentinel | hunting demo
             
+MS sentinel livestream
+        game chaner for security professionals allows running KQL queries against security data and 
+        visualize results as they stream in provides continuous stream of insights enables proactive
+        identification Of potential threats as they emerge
+   benifits of livestream
+        proactive threat monitoring : monitor user events and potential security incidents in real-time
+                                    faster detection and response
+        Enhanced investigation efficinency
+                        facilitates continous evaluattion of queries during investigations
+                        stay ahead of attackers, predict their next moves, determine when a compromise is truly over
+        streamlined threat hunting query testing
+                        rest custom hunting queries with real-time data ensure effectiveness before broader deployment for threat detection
+        additional notes:   live stream queries typically refresh every 30 seconds
+                            provides near real-time insights
+                            convert a live stream session into a detection rule
+                            enables automated alerting based on specific criteria within the query 
+                            MS sentinel offers a library of prebuilt queries for common threat hunting scenarios
+                            valuable starting point for leveraging livestream for proactive treat detection
+        
+        
+        
+    
+        
+        
 
             
                 
