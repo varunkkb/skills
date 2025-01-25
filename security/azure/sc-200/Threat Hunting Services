@@ -1,0 +1,70 @@
+Threat Hunting Services
+    threat hunting is a proactive cyberssecurity practice i involves actively searching for signs of malicious activity within your environment
+      even when there are no specific alerts or indicators meticulously ecamine data for anomalies follow trails ofeidence
+      uncover hidden thrats that might have evaded your traditional security controls
+    why is thrat hunting important ?
+      relying solely on reactive security measures like antivirus software and firewalls is no loger sufficient
+      because attackers contantly evolve tactics,techniques,procedures
+      threat  hunting actively seeks out advanced persistent threats(APTs) and other malicious actors that might be lurking in network
+    key benifits of threat hunting 
+      proactive defence : instead of waiting for an attack to happen, threat huntung allows you take the initiative and discover threats early in their lifecycle minimizing potential damage
+      imroved threat detection: actively search for signs of compramise and uncover threats that might have gone unnoticed by your automated security tools
+      enhanced incident response : information gathered during threat hunting can be invaluable for understanding he scope and impact of an atack
+      reduced dwell time: can minimize the time an attacker can remain undetected in environment and limit the potential damage they can inflict
+    threat huntng process
+          hypotesis : formulate a hypothesis about a potential threat or attack scenario
+                       threat intelligence, industry trends, own observations
+          data collection: relevant data from various sources  
+                           security logs,network traffic , endpoint telemetry
+          analysis :analyxe the collected data using tools and techniwues
+                        kql quereies, statistical analysis, machine learning  
+                    identify
+                        patterns, anomalies, indicators of compramise
+                    investigatation
+                         investigate any suspicious findings to determins their legitimacy and potential impact
+                    response  
+                          if threat is confirmed take appopriate action to contain and remediate the issue
+          who should  contuct threat hunting?
+              threat hunting is best performed by skilled security analysts or threat hunters with a  deep understanding of security 
+                  tools, techniwues,threat landscape
+
+MITRE ATT&CK
+   adversarial tractics, technicques and common knowledgebase of adversary tactics and techniques
+   understanding attacker operations and proactive defennse against tactics
+   why MITRE ATT&CK matters for threat hunting
+      common language
+            stanzardized vocabulary for describing adversary behaviour
+            facilitates communication among security teams
+      structured framework
+            organizes matrix of tactics and techniques making it easier to identify and prioritze investigation
+      Real-world insights
+            real-world insights based on real world adversary activities,insights into attacker operations and tools
+      mapping to security data
+            map security data to specific tactics and techniques, enhance threat detection and investigation
+  leveraging MITRE ATT&ACK in MS Sentinel
+      Analytic rules :bulti-in rules mapped to MITRE ATT&CK techniques
+                      automatic detection of suspicious activities with known attack patterns
+      Threat hunting queries
+                      pre-built queries based on MITRE ATT&CK techniques
+                      proactive threat search in our environment
+       hunting notebooks
+                   Jupyter notebooks incorporating MITRE ATT&CK
+  Using MITREin your threat hunting workflow 
+      identifyour targets
+      map to secuirty data 
+      formulate hypotheses
+                  develop ypotheses based on selected tactics and techniques
+      craft KQL queries
+                  write KQL queries to search for indicators of compramise 
+      Analyzw and investigate 
+                  invvestigate suspicious activities for legitimacy and impact
+      take action  
+                  confirmed threats isolate system , Block IPs, patch vulnerbilities
+      
+          
+
+
+
+
+
+
