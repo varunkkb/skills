@@ -20,13 +20,13 @@ Integrate security logs into Azure Log Analytics Workspace.
 
 Deployment
 Deploy and grow the customer’s Azure environment, collaborating with infrastructure and application teams.
-Logging and auditing cloud infrastructure with Azure Sentinel and orchestration efforts.
-Leverage security infrastructure to build automated workflows.
+-Logging and auditing cloud infrastructure with Azure Sentinel and orchestration efforts.
+-Leverage security infrastructure to build automated workflows.
 
 Management and Maintenance
-Maintain and enforce the Azure Sentinel technology and related operational processes to adequately protect assets and customer data.
-Continuously assess data coverage and identify areas for improving Azure Sentinel.
-Develop remediation recommendations for findings where automated actions have not yet been applied.
+-Maintain and enforce the Azure Sentinel technology and related operational processes to adequately protect assets and customer data.
+-continuously assess data coverage and identify areas for improving Azure Sentinel.
+-Develop remediation recommendations for findings where automated actions have not yet been applied.
 Create process documentation related to Azure Sentinel.
 
 Collaboration and Support
@@ -38,12 +38,18 @@ Work collaboratively with team members and stakeholders, clearly and proactively
 https://sandbox.cribl.io/ui/
 https://sandbox.cribl.io/
 https://packs.cribl.io/
-https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/
 
+https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/
+https://azure.microsoft.com/en-us/pricing/calculator/
+https://www.youtube.com/watch?v=7HqTGNHl0YU
+
+kql query to check the log injection for monthlly
+workbook also available to check the billible/non billable tables  
+https://koosg.medium.com/optimize-microsoft-sentinel-pricing-ca9901840b75
 Youtube : Accelerate SIEM Migrations to Sentinel with Cribl
 compliace---azure blob--crible reply to get back into cribl strem
 analytics--azure data explore
-logs to SIEM
 
+logs to SIEM
 log -life cycle managment dependang on the standards 
 
