@@ -1,1 +1,126 @@
+--------CC Admin - Stream----------
+
+lifecycle of data managment
+-Discovery : discover ,monitor,collect,forward
+-Processing: transform, secure, route
+-storing: access,optimize,store,manage
+-exploring: expolre, query,visualize
+
+processing pipelines
+  what is happening in the processing phase
+  Transform : improve data quality and provide additional context
+  secure: redact or replace sensitive data
+  route: send data to various locations based on reqirements
+  replay: send already collected data through the processing ppipeline
+
+processing challenges
+  ability to transform data as is while processing throgh pipeline
+  secure data at long term storage stage or at system of analysis stage
+  rouitng data to various locations and in desired format/fidelity
+  replying data from storage to analyse 
+
+what incentivizes different teams?
+  developers : shipping code quickly
+  SRE: system uptime,perfermance, efficiency
+  secops: risk reduction, breach mitigation
+
+observability is positioned to fix this 
+  -collecting all events,metrics,traces, and logs from applicaions
+  -interrogate applications without knowing the applications or the questions ahead of time
+  -learn and understand system behaviour, regardless of outage
+applications must be instrumented for this to work
+
+four problems with instrumentation
+  -uneven instrumentation by developers
+  -instrumentation capabilities varies by language and implementation
+  -good instrumaentation generates a lot -maybe too much -data
+  -can only instrument what your comany built
+how do we fix instrumenttation
+  -resolving information asymmetry across teams requires two things
+  -pervasive,pluggable instumentation capabilities for all code that dosen't require developer involment
+  -an observability pippeline to filteer ,redact and enrich data, then route it to your analytics platform of choice
+
+advanced design topics
+  Architecture options
+      deployment options
+          single instance
+          distributed depoloyment
+          cloud deployment
+              cribl.cloud(Saas)
+              private cloud
+              hybid
+      stream components
+            leader
+            workers
+            worker groups
+
+two key factors
+    amount of incoming data
+    amount ofdata processing: passthrough, lot of transformations, regex extractions etc, heavy re-serialization
+
+Stream deployment opions
+      single instance deployments: worker node, learder node on a single machine , used for testing environemnts or small org
+      distributed deployment is common mode in production environemnt leader node, multiple worker nodes
+      cloud deployment: cloud: leader,worker,onprem worker groups
+leader high availability
+      what provides fault tolerant architecture
+      why if primary leader fails becomes unresponsive
+         leader HA selscts new leader
+         All current state and metrics are stored in Nfs storage
+stream leaders  
+    GUI and REST access
+    auth and permessios
+    worker configuration
+    work queue (discovery and collection jobs)
+    holding state(certain pull sources)
+    
+stream workers node
+    pulls configuration from leader
+    reports metrics to leader
+    receives from push-bases source
+    collects from pull-based source
+    collector jobs
+    pushes results to destinations
+    handles all data processing
+    HA discussion
+workers and worker groups
+  worker process: a process within a single instance ,or within worker node, that handles data inputs,processing and output
+  worker node: an instance running as a managed worker, whose configuration is fully manages by the leader node
+  worker group: a collection of worker nodes that share the same configration
+  
+distributed deployment archutecture 
+  leader node: an instance running in leader mode,used to centrally author configurations,and monitor a distubuted deployment
+  mapping ruleset : an ordered list of filters used to map workers to workers group
+
+topologies: one leader,one worker group
+               use cases:
+                small deployment
+                serving single department
+                spanning single location
+             one leader, multiple worker groups
+                use cases:    
+                  supports larger deployment
+                  serving multiple departments
+                  spanning multiple locations
+                  enables a global footprint
+              stream WG to WG
+                  why
+                     compression upto ~90%
+                     save $$ on engress costs
+                     secure communication
+                     consolidated view
+                  configuration : remote data center
+                      source :key value pairs
+                      route key value pairs to json
+                      dest:cribl HTTP or Cribl TCp
+                  configuration: HQ data center
+                      source: cribl or Cribl TCP
+                      Route :any data shaping require
+                      destination splunk
+
+
+
+
+
+
 
