@@ -1,0 +1,36 @@
+go to enable mode 
+#enable
+
+create vlan
+#conf t 
+#vlan 11     [vlan numerical]
+#name maths  [vlan name]
+
+
+select switch
+#cont t                         [configure mode]
+#interface gigabitEthernet 0/2  [port]
+#switchport access vlan 10
+#switchport access mode
+
+switch to switch connectivity it is called trunck mode
+PC/phone/ connected to switch that port is called access mode 
+
+show run configuration switch all ports
+#show run
+
+show run inter cinfiguration  
+#show run interface g0/1
+
+to show whic port as trunken  
+#show interfaces trunk
+  
+to enable interface as trunk  
+#interfaace gigabiteternet 0/2
+#switchport trunk encapusalation dotip
+#switchport mode trunk
+
+to write config in enable mode
+#enable
+#write
+  
