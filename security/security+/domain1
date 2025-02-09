@@ -1,1 +1,21 @@
+------General Security Concepts-----------
 
+https://www.comptia.org/training/resources/practice-tests/security-701-practice-questions
+https://www.comptia.org/training/resources/exam-objectives/comptia-security-701-exam-objectives
+
+1.1 Security controls
+      technical controls
+          -controls implemented using systems
+          -operating system controls
+          -firewals,antivirus
+      Managerial controls
+          -Administrative controls associated with secuirity design and implementation
+          -security policies,standard operating  procdedures
+      operational controls
+          -controls implemented by people insted of systems
+          -security guards, awarenes programs
+      physical controls
+          -limit physical access
+          -gurad shack
+          -fenchs,locks
+          -badge readers
