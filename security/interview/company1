@@ -1,1 +1,120 @@
+•	Linux User/Group management
+  sudo useradd newuser   [creates new user]
+  sudo useradd -m newuser [-m creates user homw dir]   
+  sudo usermod -aG groupname username [add user to specific group
+  sudo userdel -r username [delete user  remove home dir]
+  sudo passwd username [change pwd user]
+  list users /etc/passwd
+
+•	Performed server OS hardening activities like disabling unnecessary services, enforcing strong authentication, using firewalls
+  windows disabling services 
+      services.msc  [windows]
+      Set-Service -Name "ServiceName" -StartupType Disabled [linux]
+
+
+•	Implement web application firewall (WAF) and IPS Snort rules to prevent common threats 
+   installing and Configuring modsecurity WAF
+
+   sudo apt install libapache2-mod-security2 -y  [installingng]
+   sudo a2enmod security2  [enable module]
+   sudo systemctl restart apache2 [restart aapache]
+   sudo nano /etc/apache2/mods-enabled/security2.conf
+   SecRuleEngine On
+   sudo systemctl restart apache2
+   sudo apt install modsecurity-crs -y [install OWASP core rules set]
+   sudo cp /usr/share/modsecurity-crs/crs-setup.conf.example /etc/modsecurity/crs-setup.conf [copy conf]
+   sudo systemctl restart apache2
+   sudo tail -f /var/log/modsec_audit.log [ taail log to see log]
+        /etc/modsecurity/modsecurity.conf  [Enable logging]
+        SecAuditEngine On
+        SecAuditLog /var/log/modsec_audit.log
+
+•	Monitored for security events in Splunk and implemented corrective measures.
+  Modsec and snort logs to splunk
+    -Download & Install Splunk Forwarder
+    -Apache: /var/log/modsec_audit.log
+    -Configure Inputs on Splunk Forwarder
+      sudo nano /opt/splunkforwarder/etc/system/local/inputs.conf
+      [monitor:///var/log/modsec_audit.log]
+      disabled = false
+      sourcetype = modsecurity
+      index = security_logs
+    -Forward Snort Logs to Splunk
+     Syslog logs: /var/log/syslog
+    -Configure Snort to Log in JSON Format
+     sudo nano /etc/snort/snort.conf
+    -Ensure the following logging settings:
+     output alert_json: /var/log/snort/alert_json.log
+     sudo systemctl restart snort
+    -Configure Splunk to Monitor Snort Logs
+     sudo nano /opt/splunkforwarder/etc/system/local/inputs.conf
+     [monitor:///var/log/snort/alert_json.log]
+     disabled = false
+     sourcetype = snort
+     index = security_logs
+    - Verify Logs in Splunk
+      index=security_logs sourcetype=modsecurity OR sourcetype=snort
+
+•	Monitor and analyze server performance metrics (CPU, memory usage, I/O) and implement improvement
+   Linux Server Performance Monitoring
+     Check CPU Usage top, htop
+     Check Memory Usage free -m 
+     Monitor Network Usage iftop
+   Windows Server Performance Monitoring
+      Task Manager
+      netsh int tcp set global autotuninglevel=high
+
+•	Developed shell script and scheduled cron jobs for regular maintenance tasks like backups, and monitoring
+  chmod +x /backup/backup.sh
+  crontab -e
+  0 0 * * * /backup/backup.sh >> /var/log/backup.log 2>&1
+
+--------Splunk queries---------
+Detect Multiple Snort Alerts from the Same IP
+Identifies IPs triggering multiple Snort alerts within a short time (potential attacker scanning or brute force attempts).
+index=security_logs sourcetype=snort
+| stats count by src_ip signature
+| where count > 10
+| table src_ip signature count
+| sort -count
+
+Detect ModSecurity Blocks with High Frequency
+Detects multiple WAF blocks (403 Forbidden responses) from the same IP in a short time (potential automated attack).
+index=security_logs sourcetype=modsecurity status=403
+| stats count by src_ip
+| where count > 5
+| table src_ip count
+| sort -count
+
+
+Identify SQL Injection Attempts in ModSecurity Logs
+Searches for SQL injection attempts detected by ModSecurity (based on OWASP CRS rules).
+index=security_logs sourcetype=modsecurity
+| search "SQL Injection Attack Detected"
+| stats count by src_ip uri
+| sort -count
+
+Detect XSS (Cross-Site Scripting) Attacks
+Finds logs where ModSecurity has blocked XSS attempts.
+index=security_logs sourcetype=modsecurity
+| search "XSS Attack Detected"
+| stats count by src_ip uri
+| sort -count
+
+Identify Unusual Traffic Spikes in ModSecurity Logs
+Detects sudden increases in WAF blocks, indicating a possible attack wave (DDoS or mass exploitation).
+index=security_logs sourcetype=modsecurity
+| timechart span=5m count by status
+| where count > 100
+
+ Correlate Snort & ModSecurity Events for Same IP
+ Detects IPs triggering both Snort IDS alerts and ModSecurity WAF blocks (potential targeted attack).
+(index=security_logs sourcetype=snort) OR (index=security_logs sourcetype=modsecurity status=403)
+| stats count by src_ip sourcetype
+| where count > 5
+| table src_ip sourcetype count
+| sort -count
+
+
+
 
