@@ -1,1 +1,40 @@
+•	Configured, and regularly updated Elasticsearch, Logstash, and Kibana for centralized logging and monitoring, applying patches and upgrades to ensure system performance.
+  -Install and Configure Beats (Event Forwarder)
+    sudo apt update && sudo apt install filebeat
+    sudo nano /etc/filebeat/filebeat.yml
+        filebeat.inputs:
+      - type: log
+        enabled: true
+        paths:
+          - /var/log/*.log
+        output.elasticsearch:
+        hosts: ["http://localhost:9200"]
+        or
+        output.elasticsearch:
+        hosts: ["http://localhost:9200"]
+    sudo systemctl enable filebeat
+    sudo systemctl start filebeat
+    sudo apt update && sudo apt install logstash
+    Create Logstash Pipeline Configuration
+        /etc/logstash/conf.d/logstash.conf
+        input {
+              beats {
+                port => 5044
+              }
+            }
+
+        filter {
+          grok {
+            match => { "message" => "%{COMBINEDAPACHELOG}" }
+          }
+        }
+
+        output {
+          elasticsearch {
+            hosts => ["http://localhost:9200"]
+            index => "logstash-%{+YYYY.MM.dd}"
+          }
+        }
+    sudo systemctl enable logstash
+    sudo systemctl start logstash
 
