@@ -1,0 +1,75 @@
+
+----------Insight requirment-------------------------------
+Threat Detection and Response:
+Proficient in Automating security tasks and incident response using scripting languages (Python, PowerShell).
+SME in Deploying and managing SIEM and SOAR platforms (Sentinel, Falcon FDR, Demisto).
+Implement threat detection and response capabilities using SIEM, SOAR, EDR, and XDR platforms.
+SME Utilizing EDR and XDR solutions (CrowdStrike, Defender) for endpoint protection.
+Proficient Analyzing network traffic using tools like Wireshark and Tcpdump.
+Proficient Leveraging threat intelligence platforms (TIS) to stay informed of emerging threats.
+
+Offensive Security:
+Experience in red and purple team exercises.
+Experience in Conducting penetration testing using tools like Metasploit and Kali Linux.
+Experience Assessing system vulnerabilities using Nessus, Rapid 7 and/or other open source tools
+Lead/conduct vulnerability assessments, penetration testing, and red/purple teaming exercises.
+
+Blue Team Collaboration:
+Collaborate with the Security Operations Center (SOC) to enhance detection and response capabilities.
+Automate incident response tasks using Python and PowerShell and/or AI Agents.
+
+Enterprise Security Solutions:
+Design and implement robust Identity and Access Management (IAM) and Role-Based Access Control (RBAC) models in multi-cloud environment (CIEM)
+Deep understanding on how to secure/ manage enterprise-grade hybrid infrastructure.
+Deep understanding on various load balancers stacks (ALB, ELB, Nginx) and Web Application Firewalls (WAFs).
+Ensure network security through the effective use of firewalls, IPS, VPNs, and network traffic analysis tools.  Ability to Plan/Build/Run global projects. 
+Experience in Implementing data security measures, including data loss prevention (DLP) and encryption.
+Proficient in Implementing data loss prevention (DLP) and encryption technologies.
+
+Knowledgeable of security frameworks (NIST, ISO 27001, PCI DSS, HIPAA, GDPR).
+Preferred experience with FDA GxP regulations.
+Knowledgeable in Conducting gap assessments and develop remediation plans.
+
+
+
+
+---------------------Zsclar requirment--------------------------------
+
+designing and implementing ZTNA solutions using Infrastructure as Code (IaC) principles with Ansible and Terraform,
+automating deployment pipelines with GitHub Actions,
+ntegrating with existing security frameworks Possible projects include configuring and managing ZTNA proxy servers, 
+enforcing least privilege access policies,
+replacing traditional vpn with ZTNA, 
+implementing identity-aware segmentation, 
+ensuring compliance with NIST 800-207 and Zero Trust Architecture best practices. 
+Experience with Zscaler, network security, and cloud-based security solutions is preferred.
+
+
+https://www.zscaler.com/zscaler-cyber-academy#training-delivery
+https://www.zscaler.com/zscaler-cyber-academy/cyber-threat-protection#course-outline
+https://www.zscaler.com/zscaler-cyber-academy/zscaler-for-users-engineer#lab-outline
+https://www.zscaler.com/zscaler-cyber-academy/zscaler-for-users-administrator#lab-outline
+https://www.zscaler.com/zscaler-cyber-academy/zdx-operationalization
+https://www.zscaler.com/zscaler-cyber-academy/troubleshooting#hands-on-lab-details
+
+https://www.zscaler.com/resources/brochures/zscaler-digital-transformation-admin-study-guide.pdf
+https://help.zscaler.com/
+
+
+
+-------------Cribl requirment--------------------------
+
+Role: Cribl/Splunk Intel Developer
+Looking for someone to integrate threat intelligence into Cribl and Splunk.
+Looking for someone who understands pipeline management in Cribl, working with lookups.
+Ability to work with large datasets and optimize them for large retroactive queries.
+Experience in Splunk with content development.
+ 
+Role: Cribl Engineering
+Proficient in Cribl administration. Understanding Cribl Lake, Search, and Stream.
+Preferably certified in CCOE User and Admin.
+Experience in setting up an enterprise deployment with worker groups.
+Setting up sources, destinations, routes, and advanced pipelines.
+
+
+
