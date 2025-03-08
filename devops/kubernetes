@@ -98,7 +98,7 @@ service- svc - handles load balancing
                svc tracks lables and selectors
 
 service types
-      clusterIP [discovery and load balancing]
+      clusterIP [who has access to cluster network]
       nodeport  [indide org access]
       loadbalancer [exposes to externe world public]
 
