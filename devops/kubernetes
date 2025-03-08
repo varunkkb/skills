@@ -1,1 +1,132 @@
 
+
+
+worker node
+    pod [defination of how to run a container] pod.yml [can be single container or multiple]
+        container runtime
+        kublet
+        kube-proxy [Iptables for networking]
+
+master
+        API server 
+        scheduler - schedulign resourses 
+        etcd - key value pairs [ cluster related information/config]
+        controller manager [replica sets]
+        CCM [cloud controller manager] used to configure undelining cloud provider [not required if on-premise]
+
+
+Pratical scenerio 
+  creation
+  upgradation
+  deletion
+
+used kops [kubernetes operations]
+    life cycle of pods
+    install, upgrade, deletion
+
+
+kubectl [kommandline ] tool to access kubernetes
+
+troubleshoot commands
+    kubectl logs podname
+    kubectl describe podename
+
+docker
+    docker run -it -p -v -net  
+Pod
+    yaml manifest (running sepecification of docker)
+deploy
+    auto healing
+    auto scaling
+    process: deployment resource->replicaset(kubernetes controller)->pods
+              yaml manifest         count2                            2pods
+
+kubectl get pods
+        get deploy
+        get all
+        get all -A
+
+----pod.yml-----
+apiVersion:v1
+kind:pod
+metadata:
+  name:mysql
+spec: 
+  containers:
+  -name:nginx
+   image:mysql 7.2
+   ports
+   - containerPort: 3306
+-------------------------
+
+kubectl apply -f pod.yml
+kubectl get pod -o w
+to log into pod
+    >>ssh podIP address
+
+-----deployment.yml------------
+apiVersion:v1
+kind:deployment
+metadata:
+  name:mysql-deployment
+  lables:
+    app:nginx
+spec:
+  replicas: 3
+  selector:
+    matchLables:
+        app:nginx
+  template:
+    metadata:
+      lables:
+        app:nginx
+    spec: 
+      containers:
+      -name:nginx
+       image:mysql 7.2
+       ports
+       - containerPort: 3306
+
+-----------------------------------
+kubernetes services
+      without services when pods go down the IP address of the pod which auto healed or started new changes and should be updated mannualy
+
+service- svc - handles load balancing
+                       service discovery
+                       expose pods externerally outside k8 cluster  
+               using lables and selectors
+               svc tracks lables and selectors
+
+service types
+      clusterIP [discovery and load balancing]
+      nodeport  [indide org access]
+      loadbalancer [exposes to externe world public]
+
+if used EKS it uses ELB
+
+worker node 
+      service
+      Deployment-replicaset-pods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
