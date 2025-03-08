@@ -109,12 +109,42 @@ worker node
       Deployment-replicaset-pods
 
 
+Interview questions
+        docker vs kubernetes
+        main components of kubernetes arch
+        docker swarm and kubernetes
+        docker container vs kubernetes pod [pod runtinme specification of container]
+        name space in kubernetes [logical seperation using RBAC]
+        kube proxy [maintaines nextwork rules in each worker node]
+        services within kubernetes
+        kubelet [manages the container that are schedukes to run on that node]
+        day to day actiities
+                   monitoring on kubernetes cluster
+                   developer pod access , troubleshoot issues- rout issues
+                   maintainence works -uprades- installing mandatery packages
+                   3master nodes and 10 worker nodes
+
+Kubernetes troubleshooting
+    imagePullBackOff
+    CrashLoopBackOff 
+    Node Selector, Node Affinity, Taints and Tolerations
+    namespace resource sharing [OOM killed out of memory]
+                use resource quota
+                use resource limits
+
+Upgrades
+        backups
+        read release notes
+        control plane [etcd,API,scheduler]
+        worker/data node plane [unschedulabe,drain,move pods] [upgradekublet]
 
 
+RBAC
+Users - service accounts
+roles/cluster roles
+role binding
 
-
-
-
+IDP - Okta
 
 
 
