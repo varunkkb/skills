@@ -1,0 +1,24 @@
+create dice for netwook profile
+
+vlan
+trunk port
+access port- reqirments[ trunkports, assignment of port to port channel,]
+port channel
+port security
+HSRP
+routing -static
+
+
+port security
+	binding device to specific port
+
+      -swirchport paort-secuirty mac-address macID
+      -swirchport paort-secuirty voilation
+      -swirchport paort-secuirty maximum 3
+
+
+
+
+
+
+
