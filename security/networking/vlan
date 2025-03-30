@@ -33,4 +33,19 @@ to enable interface as trunk
 to write config in enable mode
 #enable
 #write
-  
+
+create port channel
+#interface port-channel  1
+#interface gi portnumner
+#channel-group channelnumber mode active
+
+# do show enterchannel summary
+
+
+ip 1.1.1.1 255.255.255.0
+no shut
+ip route 172.168.1.0 255.255.255.0 1.1.1.2
+
+show ip interface brief
+show run
+
