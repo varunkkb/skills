@@ -41,10 +41,15 @@ create port channel
 
 # do show enterchannel summary
 
-
+assigning ip address to interface
 ip address 1.1.1.1 255.255.255.0
 no shut
+assigning static route
 ip route 172.168.1.0 255.255.255.0 1.1.1.2
+
+default route 
+ip route 0.0.0.0 0.0.0.0 nexthopIP
+
 
 show ip interface brief
 show run
