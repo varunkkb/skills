@@ -27,7 +27,13 @@ Okta group rules
 -group rules uses if-then logic to add user automatically
   user profile attribute
   existing group membership
-  
+
+group rules can be ccreated by 
+-standardgroup rule conditions GUI
+-Okta expression language
+
+
+
 admin->directory->groups->rules
 use basic condition or okta expression language
 IF user atribute ↓ , attribute name euals field
@@ -53,5 +59,29 @@ The Okta Expression Language can create sophisticated group rules that consider 
 Requirement 3
 String manipulation
 You want to automatically assign users to country-specific groups based on their phone numbers, without requiring them to manually input their country during registration. Phone numbers are often stored as a single string, including the country code. The challenge is to extract and interpret this country code to determine the user's location.
-
 You can use strings to manipulate functions and extract the country code from a phone number, then use it to assign the user to the appropriate country group.
+
+benifits of okta expression language
+-efficient user management
+  user management by automating complex, attribute-based decisions
+  create dynamic rules that respond to changes in user attributes in real-time
+  users are always placed in the correct groups, given appropriate access, and managed according to your organization's policies
+-reduce your rules
+  more sophisticated, condition-based rules that combine multiple criteria
+  replace several simple rules with a single, more comprehensive rule
+  easier to manage, troubleshoot, and audit
+  improved system performance and reduced potential for conflicts or errors
+-do more with rules
+  create highly customized, context-aware rule
+  incorporate complex logic, perform calculations, manipulate strings, and even call external functions
+  automate sophisticated workflows, and respond to complex business requirements
+
+core components
+   When creating an expression, you can reference any attribute from a user’s profile by specifying user. followed by the attribute name, such as user.department.
+   Comparison operators are used to evaluate relationships between values, such as checking if attributes are equal (==), not equal (!=), or greater/less than (>, <, >=, <=). These operators help define specific conditions for filtering users.
+   Logical operators allow you to combine multiple conditions in Okta expressions.
+   Functions provide additional capabilities like string manipulation and date formatting. For example, String.startsWith() to check how a string begins and String.stringContains() to see if a value exists within a string.
+
+use cases: streamline processes like employee onboarding, regional access control, and automated country assignment 
+
+
