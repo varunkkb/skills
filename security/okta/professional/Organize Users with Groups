@@ -1,1 +1,57 @@
+Types of groups
+- okta group  [source is okta , created and  managed in okta itself]
+- directory groups [ created and  managed in AD/LDAP]
+- application groups [created and  managed in applications like workday / HR these groups are manage in app itself]
 
+Note
+nested groups from directory service or applications are flattend after importing it to okta
+okta doesnt support nested groups
+
+source of truth 
+  AD/LDAP
+  App
+  Okta
+
+creating groups in Okta
+admin-directory-groups
+  groups are listed with imported source icon
+  group name "everyone" icon okta is all users from every source
+to add gropp
+  add group-> name, description
+to add people to group 
+  select group-> addign people-> add people by clicking "+"
+
+Okta group rules 
+-add users using profile attributes
+-application and policy assigments to users
+-group rules uses if-then logic to add user automatically
+  user profile attribute
+  existing group membership
+  
+admin->directory->groups->rules
+use basic condition or okta expression language
+IF user atribute ↓ , attribute name euals field
+THEN assign to field
+Exempt
+save and activate rule
+
+Note : also can be done using okta expression language
+Key features and capabilities of the Okta Expression Language
+•Can be used both within the Okta Admin Console and programmatically through Okta's APIs.
+•Integration with Okta features, such as group rules, app assignments, and more.
+•Combine & transform attributes before storing on the user profile.
+•Can use the user profile attributes and pass to other applications for provisioning and authentication.
+
+Requirement 1
+Dynamic date-based rules
+A manager needs to assign different sets of applications to new employees at 30, 60, and 90 days after their start date. This is part of a phased onboarding process where employees gain access to more resources as they progress in their role.
+The Okta Expression Language allows administrators to create group rules that automatically place users into the appropriate groups based on their hire date.
+Requirement 2
+Complex attribute combinations
+You need to grant access to specific resources based on both an employee's department and their geographical location to comply with data regulations and to provide relevant tools for each region. Using department or location alone is not granular enough; you need to combine these attributes to create precise access groups.
+The Okta Expression Language can create sophisticated group rules that consider multiple user attributes simultaneously. In this case, you can combine the user's department and location to create dynamic groups.
+Requirement 3
+String manipulation
+You want to automatically assign users to country-specific groups based on their phone numbers, without requiring them to manually input their country during registration. Phone numbers are often stored as a single string, including the country code. The challenge is to extract and interpret this country code to determine the user's location.
+
+You can use strings to manipulate functions and extract the country code from a phone number, then use it to assign the user to the appropriate country group.
