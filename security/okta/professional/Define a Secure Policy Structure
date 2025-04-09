@@ -55,7 +55,28 @@ okta policies should have
     policy settings
     rule data
 
-Assurance is degree of confidence 
+Assurance is degree of confidence achived using authenticators
+about policies and policy rules
+policies
+  -contain groups of resources that require similar treatmment
+  -enable admins to securely control access to applications and APIs
+  - contains conditions and actions
+  - contains one or more rules minimum  is one
+
+how are policies and rules evaluated
+global session policy
+authE policy
+enrollement policy
+password policy
+
+order of execution is top down
+authE policies are tied to specific app and evaluatedd when a user attempts to access them, bases on rule priority
+
+  
+
+
+
+
 
 
 
