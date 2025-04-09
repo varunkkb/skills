@@ -38,9 +38,24 @@ multi-layered security
   -authN policy [sign-on]
 
 sign-on policies
+  -global session
   define assurance that needs to be satisfied
+  -authN policy
   determins which authE end users will be challenged
 
+Okta requires assurance levels to be satisfied before granting end-user access to an application. These assurance levels can be specified 
+-Authentication Policies
+-Global Session Policies
+
+Okta Policy Framework Explained
+okta policies should have 
+    common framework
+    message structure
+    API
+    policy settings
+    rule data
+
+Assurance is degree of confidence 
 
 
 
