@@ -1,5 +1,11 @@
 --Secure with Assurance--
 
+Assurance is an advanced authentication approach combining multiple factors to verify user identity.
+
+Authenticators and their characteristics are utilized to achieve assurance levels.
+
+Admins configure authentication requirements and users select the authenticator that meets the specified assurance level.
+
 key charecteristics of assurance
 -admin configuration and user decision
 -assurance acts as filter
