@@ -1,1 +1,43 @@
+--Secure with Assurance--
+
+key charecteristics of assurance
+-admin configuration and user decision
+-assurance acts as filter
+-remediation by design
+
+assurance is achivr by one or more authenticators using wich user use to auth
+authernticatoru types
+  biometrcs
+  possession
+  knowledge
+
+email -possion
+okta verify - combinations
+    possion , possion+knowledge, possession_biometric
+passwod- knowledge
+phone -possion
+security question -knowledge
+
+check authentiators characteristics
+
+assurance levels
+  low- password,security question,any single-factor auth method
+  medium - MFA with 2 factor categories
+  high- MFA with phishing resistant [passwd+webauth-enabled biometric/security key,okta verify OTP+ webauth]
+
+controlling assurance with sign-on policies
+multi-layered security
+  -rate limiting,threatInsihgt,network zone block listing
+  -global session policy [signf-on]
+  -authN policy [sign-on]
+
+sign-on policies
+  define assurance that needs to be satisfied
+  determins which authE end users will be challenged
+
+
+
+
+
+
 
