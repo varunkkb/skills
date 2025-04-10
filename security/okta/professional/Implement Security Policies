@@ -1,1 +1,35 @@
+----set up MFA enrollment---------
+
+
+MFA enrollment policies
+-specify available auhenticators during enrollment
+-establish enrollemnt requirments
+
+steps for setting up authenticators
+-enable the authenticator
+-configure the authenticator
+-configure custom enrollemt policies as needed
+
+admin->security->authenticators
+
+
+MFA Enrollment Policies control the enrollment process for authenticators, ensuring users set up the appropriate factors while meeting organizational requirements.
+Authenticators can be used for both authentication and self-service recovery, such as account unlocking or password resets.
+Users can manage their authenticators and settings, including adding new devices or setting up additional authenticators, through their account settings.
+
+If no authenticator enrollment policy is configured, the default policy enforces enrollment during Okta sign-on.
+
+What authentication policies do for you
+Risk-based authentication. 
+"Security requirements match application sensitivity."
+Advanced protection where needed.
+"Critical systems require phishing-resistant keys."
+Context-aware decisions. 
+"Device health and network location influence access."
+Streamlined productivity.
+"Everyday tools have appropriate, simpler requirements."
+
+Working with the team, Jordan mapped out every application across FinTech Global, categorizing them by sensitivity, user groups, and required protection level. Then they analyzed the contexts in which these applications were accessed—corporate offices, outside networks, managed devices, and personal phones.
+
+Think of global session policies as the security at the building entrance, while authentication policies are the specific access controls for each room inside.
 
