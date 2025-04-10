@@ -19,6 +19,8 @@ Users can manage their authenticators and settings, including adding new devices
 
 If no authenticator enrollment policy is configured, the default policy enforces enrollment during Okta sign-on.
 
+----Define strong authentication policies--------
+
 What authentication policies do for you
 Risk-based authentication. 
 "Security requirements match application sensitivity."
@@ -74,4 +76,11 @@ Encryption, firewall, and up-to-date OS required.
 Network restrictions.
 Limited to trading floor or VPN access.
 
+
+"Authentication isn't about making everything more secure—it's about making everything appropriately secure. When we matched our authentication policies to the actual risk profile of each application, we strengthened our security where it matters most while improving the user experience everywhere."
+
+------Set Up Global Session Policies-------
+watch video again
+
+-----Set Up Password Policies with Self-Service Recovery Capability----
 
