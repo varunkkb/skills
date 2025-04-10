@@ -33,3 +33,43 @@ Working with the team, Jordan mapped out every application across FinTech Global
 
 Think of global session policies as the security at the building entrance, while authentication policies are the specific access controls for each room inside.
 
+User context: "Trading team members need different access than marketing." User type (employee, contractor) Group membership Specific user attributes
+Device context:  "Financial apps require managed, encrypted devices." Device management state Platform (iOS, Windows) Security posture checks
+Network context: "Access from the trading floor versus from home requires different security." IP address or range Network zone membership Geographic location
+Authentication requirements: "Sensitive data needs phishing-resistant hardware keys."Factor types requiredPhishing resistance Re-authentication frequency
+
+
+The implementation strategy
+Jordan's team designed a structured approach to authentication policies:
+ Application classification: They categorized all applications by sensitivity, regulatory requirements, and user base.
+ User groups mapping: They defined which groups needed access to which applications.
+ Context definition: They established what context factors matter for each application type.
+ Policy creation: They built authentication policies with granular rules based on all these factors.
+
+Company email
+"Our email system has moderate sensitivity but is used constantly. Employees on trusted networks can access it with minimal friction." – Jordan
+Single factor from trusted networks.
+Only FastPass is needed when on the corporate network.
+12-hour session length.
+Balances convenience with security.
+Basic device check.
+Ensures the device is registered with Okta.
+
+Developer portal
+"Our developers need flexibility but still require appropriate security. We balanced these needs with smart policies." – CTO
+Flexible MFA options.
+Choice of Okta Verify or security keys.
+Group-based access.
+Different requirements for contractors vs. employees.
+No IP restrictions.
+Developers can work from anywhere with proper authentication
+
+Trading platform
+With millions in transactions daily, our trading platform requires the strongest protection without compromising usability for traders." 
+– Head of Trading
+Phishing-resistant hardware key
+A FIDO2 security key is required for all access.
+Device posture verification.
+Encryption, firewall, and up-to-date OS required.
+Network restrictions.
+Limited to trading floor or VPN access.
