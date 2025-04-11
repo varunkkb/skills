@@ -83,4 +83,13 @@ Limited to trading floor or VPN access.
 watch video again
 
 -----Set Up Password Policies with Self-Service Recovery Capability----
+-configure pwd complexity, lenght, age,and lockout settings to prevent pws guessing or cracking
+-enable self-servicd acc recovery to allow users to reset their okta pws or unlock thei acc
+- self service provides better user experience
+-challenge1[okta verify, phone sms/voice, email]
+
+admin->security->authentecators->select authenticator->create policy-> add rule
+
+
+In OIE, authenticator enrollment policy and password policy are evaluated together
 
