@@ -54,3 +54,6 @@ ip route 0.0.0.0 0.0.0.0 nexthopIP
 show ip interface brief
 show run
 
+sh run config | include ip route
+sh interface brief
+
