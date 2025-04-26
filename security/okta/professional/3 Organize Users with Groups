@@ -21,13 +21,13 @@ source of truth
 creating groups in Okta
 admin-directory-groups
   groups are listed with imported source icon
-  group name "everyone" icon okta is all users from every source
+  group name "everyone" icon okta is all users from every source of truth
 to add gropp
   add group-> name, description
 to add people to group 
   select group-> addign people-> add people by clicking "+"
 
-okta sourced group called everyone group is default group in Okta
+note : app and diroctory sourced groups cannot be managed in okta
 
 Okta group rules 
 -add users using profile attributes
