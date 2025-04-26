@@ -1,1 +1,80 @@
+--Differentiate the Types of Users in Okta---
+Okta's three distinct user types empower organizations to seamlessly integrate and authenticate users across multiple repositories, ensuring efficient user
+management and secure access control across their entire digital ecosystem.
+
+Types of users: 
+- okta-sourced
+  users maintined inside okta, attibutes are modified within okata identity cloud
+  authenticated against okta
+  credentials are stored in okta
+- directory sourced
+  brought into okta throgh directory integration ex: MS AD , LDAP
+  users maintained inside AD, LDAP
+  Attributes modification is done in drectory service
+  authenticated against directory provided deligated auth is enabled by default when you install agents
+- App sourced 
+  source of truth is application (not just HR any other source also)
+  attributes are maintined inside of application
+  uses cannot be authenticated directly against application, users are brought into okta anauthenticated there or in AD or LDAP
+  
+Okta User profile attributes
+- containes 31 default base attributes, cannot be modified
+- required by defult  username, primary email,first name, last name
+- first name and last name can be marked optional
+- custom attributes these are defind for the purposes of integration with apps or integration with on premesis AD
+
+----create okta-sourced users individually------
+->admin->directory->people-> add person 
+  user type [drop down :user], first name, last name, username[must be email formate no need to be valid]
+  groups
+  activation [drop down : 
+                activate now(show pending user action unless user clicks on activation email expires in 7 days, 
+                activate later(will have staged status)]
+  I will set password [check box]
+  user must change pwd on first login[check box]
+  save and add another
+
+---Create Okta-Sourced Users in Bulk---
+-admin-directory->people-more actions->import users from csv
+-formate details as per given template [max 10 MB or 10000 users]
+-check box automatically activate new users
+-check box do not create a pwd and only allow login via identity provider
+
+
+---Assign Standard Administrator Roles----
+-admin->security->administrators [need to be loggedin as super admin to view]
+      tabs[overview,roles,resources,admins]
+- multiple roles can be assigned to single admin user by add assignment
+
+
+-Super Administrator
+  Full access to perform all admin tasks and permission sets in Okta.
+  This is the only role that can assign admin privileges. 
+
+-Organization Administrator
+  Can perform most org-wide settings.
+  Can perform all management tasks for users and groups.
+  Cannot perform any application management tasks.
+
+-Application Administrator
+  Can manage profile information.
+  Can view users and groups, but not modify either.
+  Can manage info on apps to which they are assigned access.
+
+-Group Administrator
+  Can create users, deactivate users, and reset passwords.
+  Can be used to restrict tasks to select group(s) of Okta users.
+  Cannot create groups or manage any apps.
+
+-Read Only Administrator
+  Can view and run scripts.
+  Can view users, groups, and apps but cannot modify any settings.
+  Can view, but not modify org settings.
+
+-Help Desk User
+  Can view users.
+  Can reset passwords and MFA.
+  Can clear user session.
+  
+Can unlock user accounts.
 
