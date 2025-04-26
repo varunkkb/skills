@@ -1,3 +1,9 @@
+
+Use groups to divide your user base into smaller segments and refine application access 
+and security policies. Here, we'll talk about how groups and group rules can be used
+within Okta, including creating Okta groups and working with directory- and 
+application-integrated groups.
+
 Types of groups
 - okta group  [source is okta , created and  managed in okta itself]
 - directory groups [ created and  managed in AD/LDAP]
@@ -20,6 +26,8 @@ to add gropp
   add group-> name, description
 to add people to group 
   select group-> addign people-> add people by clicking "+"
+
+okta sourced group called everyone group is default group in Okta
 
 Okta group rules 
 -add users using profile attributes
