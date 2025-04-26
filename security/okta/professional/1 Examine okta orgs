@@ -1,1 +1,31 @@
+When your company subscribes to Okta Workforce Identity Cloud, they select
+the services they need based on business needs.
 
+An Okta org is a tenant in the Okta Identity Cloud that contains the custom configurations 
+and data for a specific organization.
+
+Okta org types
+-production 
+  is a stable environment on the current software release.It includes all generally available features for the products you're subscribed to
+-review sandbox
+  is a secure staging environment wirh access to the features available in the next release. You can subscibe to a preview sandbox to test new 
+  confguratin and features before rolling them out to users
+
+End-user dashboard
+  Dashboard - My apps - section work (app thumbnails)
+  can add more section -reorder, drag and drop
+  app can be sorted
+  ... in thumnail in per app see more information 
+      -Appname, username, remove, edit , auto launch setting check box
+
+Admin Console
+  dashboard
+      overview- users, groups, SSO apps
+      status- okta service agents
+      taskslist, org changes, security monitoring {threat insight tasks list}
+      app count by authentetication protocols 
+
+Security -> administrators- > tabs : Overview, roles, resources, admin
+      
+
+  
