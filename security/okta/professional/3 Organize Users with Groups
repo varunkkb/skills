@@ -10,8 +10,9 @@ Types of groups
 - application groups [created and  managed in applications like workday / HR these groups are manage in app itself]
 
 Note
-nested groups from directory service or applications are flattend after importing it to okta
+-nested groups from directory service or applications are flattend after importing it to okta
 okta doesnt support nested groups
+-okta sourced groups cannot be imported into active directory or applications
 
 source of truth 
   AD/LDAP
