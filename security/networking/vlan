@@ -75,4 +75,9 @@ confi>network ....
 to remove 
 no router rip 2
 
+OSPf
+> config ospf ID
+> network 10.10.10.0 0.0.0.255 area 0
+> network .......... 0.0.0.255 area 0
+
 
