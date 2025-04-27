@@ -72,4 +72,7 @@ confi>newtwork 10.10.10.0
 confi>network ....
 confi>network ....
 
+to remove 
+no router rip 2
+
 
