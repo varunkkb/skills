@@ -57,3 +57,8 @@ show run
 sh run config | include ip route
 sh interface brief
 
+rip protocol
+confi> router rip
+confi>newtwork 10.10.10.0
+confi>network ....
+confi>network ....
