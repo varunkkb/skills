@@ -57,8 +57,19 @@ show run
 sh run config | include ip route
 sh interface brief
 
-rip protocol
+#rip protocol
 confi> router rip
 confi>newtwork 10.10.10.0
 confi>network ....
 confi>network ....
+
+to remove 
+no router rip
+
+#EIGRP
+config> router eigrp 2
+confi>newtwork 10.10.10.0
+confi>network ....
+confi>network ....
+
+
