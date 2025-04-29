@@ -30,6 +30,17 @@ to add people to group
 
 note : app and diroctory sourced groups cannot be managed in okta
 
+Use case: Using group rules
+You need a way to efficiently assign the "Sales" group members to the
+applications they need. Additionally, there are specific security policies
+that you need to apply to the Sales team.
+
+Okta doesnt support appying policies to individual accont
+
+Rather than adding users to groups one by one, use Okta's group rules feature
+to add Okta-, directory-, and application-sourced users using profile 
+attributes or existing group membership.
+
 Okta group rules 
 -add users using profile attributes
 -application and policy assigments to users
