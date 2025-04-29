@@ -75,14 +75,28 @@ confi>network ....
 to remove 
 no router rip 2
 
-OSPf
+-----------------OSPf-----------------------
 > config ospf ID
 > network 10.10.10.0 0.0.0.255 area 0
 > network .......... 0.0.0.255 area 0
 
-BGB
+-------------BGB--------------------------
 >router bgp id
 >neighbor 1.1.1.2(router Ip) remote-as id
 >network 1.1.1.0 mask 255.255.255.0 
+
+
+-----------VTP-----------------------
+default will be server mode switch
+
+>vtp status
+>vtp domain name [both switchs]
+>vt mode client  [switch 2]
+>configure both interfaces to trunck mode
+
+
+#interfaace gigabiteternet 0/2
+#switchport trunk encapusalation dotip
+#switchport mode trunk
 
 
