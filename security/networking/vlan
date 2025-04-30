@@ -100,3 +100,15 @@ default will be server mode switch
 #switchport mode trunk
 ----------------------------------------
 
+create vlan 10 and add ports in vlan 10 and 20 and so on  in switch
+
+config>interface g0/0.10  [valn 10]
+config>encapulation dotIQ 10 [vlan10]
+>ip address 192.168.10.1 255.255.255.0
+
+----------------------------------------------------
+
+
+
+
+
