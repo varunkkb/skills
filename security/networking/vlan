@@ -98,5 +98,5 @@ default will be server mode switch
 #interfaace gigabiteternet 0/2
 #switchport trunk encapusalation dotip
 #switchport mode trunk
-
+----------------------------------------
 
