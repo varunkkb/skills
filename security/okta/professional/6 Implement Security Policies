@@ -93,3 +93,21 @@ admin->security->authentecators->select authenticator->create policy-> add rule
 
 In OIE, authenticator enrollment policy and password policy are evaluated together
 
+
+
+--------Set Up Password Policies with Self-Service Recovery Capability-----------
+In a password policy
+-configure pwd complexity,lenght, age and lockout settings to prevent pwd 
+guessing or cracking.
+-enable self-service account recover to allow users to reset their 
+okta passwords or unclok their accounts
+
+challenge 1 
+  okta verify(push only)
+  phone(sms/voice)
+  email
+challenge 2(optional)
+  any authenticator
+  allowed for authentication
+
+
