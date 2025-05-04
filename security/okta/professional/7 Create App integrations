@@ -50,6 +50,15 @@ yourself.
 To integrate an app using the OIN, go to Applications > Applications from the Admin Console.
 Then select Browse App Catalog.
 
+-------Configure SAML SSO-----------
+Security Assertion Markup Language (SAML) is an authentication 
+protocol that uses encrypted XML assertions to provide federated
+single sign-on (SSO) for an app.
+
+
+
+
+
 
 
 
