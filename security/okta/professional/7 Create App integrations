@@ -1,1 +1,55 @@
+----------Explore Okta Single Sign-On----------
+
+Okta Single Sign-On (SSO) provides a simplified sign-on experience
+that increases productivity and security. With SSO, users can access
+multiple apps through a single Okta session.
+
+When a user signs in to Okta, Okta authenticates the user
+using one set of credentials. After successful authentication,
+the user can access multiple apps without having to re-enter their
+credentials.
+
+Identity federation
+-Identity federation allows a user's identity information to be 
+used across multiple systems and domains by establishing a trust
+relationship. Identity federation allows a user to authenticate in 
+one system or domain and access resources in another system or domain
+without having to reauthenticate.
+-With identity federation, Okta must establish a trust relationship
+between an app and Okta. When a user signs in to Okta using their
+credentials, they can access the app without needing to reauthenticate.
+-Okta supports these SSO methods for identity federation. Select each
+card to learn more.
+
+Security Assertion Markup Language (SAML)
+-Authentication protocol that uses XML to pass identity data between 
+an identity provider and  a service provider
+OpenID Connect (OIDC)
+-Authentication protocol that uses a JSON Web Token (JWT) to pass 
+identity data between an identity provider and a service provider
+Web Services Federation (WS-Fed)
+-XML-based protocol used to sign in to legacy Windows-based web
+apps and Microsoft Office 365
+
+What if my app doesn't support federated SSO?
+Some apps don't support federated SSO. Instead, they rely on basic
+authentication with a username and password. For these apps, Okta
+offers a proprietary SSO method called Secure Web Authentication (SWA).
+
+When using SWA, Okta securely stores the user's app credentials
+in your Okta tenant. When the user accesses a SWA app, a browser 
+plugin performs a secure form fill to post the user's credentials
+to the app.
+
+Okta Integration Network
+The Okta Integration Network (OIN) is a catalog of prebuilt app 
+integrations provided by Okta. The OIN lets you securely implement
+SSO for an app without building and maintaining the integration 
+yourself.
+
+To integrate an app using the OIN, go to Applications > Applications from the Admin Console.
+Then select Browse App Catalog.
+
+
+
 
