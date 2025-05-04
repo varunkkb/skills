@@ -1,4 +1,4 @@
---Secure with Assurance--
+------Secure with Assurance---------
 
 Assurance is an advanced authentication approach combining multiple factors to verify user identity.
 
@@ -47,7 +47,7 @@ Okta requires assurance levels to be satisfied before granting end-user access t
 -Authentication Policies
 -Global Session Policies
 
-Okta Policy Framework Explained
+---------Okta Policy Framework Explained-----------
 okta policies should have 
     common framework
     message structure
