@@ -1,13 +1,21 @@
 ------Secure with Assurance---------
 
-Assurance is an advanced authentication approach combining multiple factors to verify user identity.
+Assurance is level of confidence
 
-Authenticators and their characteristics are utilized to achieve assurance levels.
+-Assurance is an advanced authentication approach combining 
+multiple factors to verify user identity.
+-Authenticators and their characteristics are utilized to
+achieve assurance levels.
+-Admins configure authentication requirements and users select 
+the authenticator that meets the specified assurance level.
 
-Admins configure authentication requirements and users select the authenticator that meets the specified assurance level.
+okta Assurance
+-flexibility: allow users to choose factors
+-security : all users to use strong factors
+-convenience : reduce factor prompts for non critical 
 
 key charecteristics of assurance
--admin configuration and user decision
+-admin configuration and user decision 
 -assurance acts as filter
 -remediation by design
 
