@@ -55,9 +55,63 @@ Security Assertion Markup Language (SAML) is an authentication
 protocol that uses encrypted XML assertions to provide federated
 single sign-on (SSO) for an app.
 
+How does SAML Work?
+SAML uses an XML document (called a SAML assertion) that contains
+the authentication and authorization information for a user. When
+a user tries to access an application, Okta authenticates the user's
+identity. After successful authentication, Okta generates the SAML 
+assertion and then redirects the assertion back to the browser. 
+The browser forwards the SAML assertion to the Assertion Consumer 
+Service (ACS) URL, which is the login URL for the app.
 
 
+There are two ways to initiate a SAML flow:
+•In an IdP-initiated flow, the user attempts to sign in to Okta. 
+Okta authenticates the user's credentials and signs them into their 
+End-User Dashboard. When the user attempts to access the app from their
+dashboard, Okta generates the SAML assertion to access the app.
 
+•In an SP-initiated flow, the user attempts to sign in to the 
+application. The application sends the authentication request to 
+Okta. Okta authenticates the user's credentials and generates the
+SAML assertion to access the app.
+
+
+Integrate a SAML app
+When you integrate a SAML app using the OIN, you need to configure
+this information:
+1 Establish a trust relationship between the application and Okta.
+This trust relationship is created by exchanging metadata and 
+giving the application a digital certificate from Okta.
+The application uses the certificate to validate assertions.
+2 Set the ACS URL (login URL) for the app.
+
+Let's look at the steps to integrate Salesforce from the OIN using
+SAML. These steps enable an IdP-initiated flow to access Salesforce
+from the Okta End-User Dashboard.
+1.Add the app integration.
+From the app integration catalog, make sure that the app supports SAML
+SSO and then select Add Integration.
+2.Specify the general settings for the app.
+From the General Settings tab, set the basic information for 
+the Salesforce app, including the application label, instance
+type, and custom domain (if needed). Then select Next.
+3.Set the sign-on method to SAML for the app.
+From the Sign-On Options tab, set the sign-on method to SAML 2.0.
+At the bottom of the page, select Done.
+4.Download the metadata file from Okta
+From the Sign On tab of the app, scroll down to the SAML Signing
+Certificates section. Select Actions > View IdP metadata for the
+active certificate. From the new browser tab containing the
+metadata, right-click anywhere on the screen and select Save
+as to save the metadata.xml file.
+5.Create the SAML connection in Salesforce.
+From the Salesforce setup menu, edit the Single Sign-On Settings
+to enable SAML. Select New from Metadata File and open the
+metadata.xml that you downloaded from Okta. Then select Create to
+add the connection. You can change the Name and API Name to 
+something more readable and select Save.
+6.Set the ACS URL (login URL) for the app.
 
 
 
