@@ -16,7 +16,8 @@ Types of users:
   source of truth is application (not just HR any other source also)
   attributes are maintined inside of application
   uses cannot be authenticated directly against application, users are brought into okta anauthenticated there or in AD or LDAP
-  
+  auth either through okta or an on-prem directory
+
 Okta User profile attributes
 - containes 31 default base attributes, cannot be modified
 - required by defult  username, primary email,first name, last name
@@ -33,6 +34,8 @@ Okta User profile attributes
   I will set password [check box]
   user must change pwd on first login[check box]
   save and add another
+
+  user status : Active, Pending user action , Staged , others
 
 ---Create Okta-Sourced Users in Bulk---
 -admin-directory->people-more actions->import users from csv
