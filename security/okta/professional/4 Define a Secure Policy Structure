@@ -81,6 +81,11 @@ authE policy
 enrollement policy
 password policy
 
+policy rule priority
+1 policy A/Rule A
+2 Policy B/Rule B
+3 Default policy/catch all rule everyone
+
 order of execution is top down
 authE policies are tied to specific app and evaluatedd when a user attempts to access them, bases on rule priority
 
