@@ -1,1 +1,33 @@
+---------Explore Lifecycle Management-----
 
+When an employee joins your company, you need to give them access to the right resources. Likewise, when an employee changes roles or leaves your company, you need to modify or revoke their access.
+Okta Lifecycle Management (LCM) automates the processes for managing a user's account and access rights. LCM lets you streamline the onboarding and offboarding processes for your workers, including employees, contractors, and partners.
+LCM reduces security risks by eliminating manual processes which often lead to access control gaps. It also reduces the time required to manage policies, people, apps, and devices.
+Joiner, Mover, Leaver process
+The Joiner, Mover, Leaver (JML) process defines the stages of a user's lifecycle: onboarding, changing roles, and offboarding. Expand each item below to learn more.
+Joiner
+When a new worker joins the company, they are typically added to an HR system or a directory service. LCM automatically provisions the new user in Okta and adds the user to the appropriate groups based on their user attributes (such as department). Then, LCM automatically provisions the user to the apps they need based on their group membership.
+Mover
+When a worker moves to a new role, LCM automatically updates the user record in Okta and adjusts their group membership. Based on the new group membership, LCM automatically deprovisions the user from apps they no longer need and provisions the user to new apps
+Leaver
+When a worker leaves the company, LCM automatically updates the user record in Okta to deactivate the user. LCM automatically deprovisions the user from their apps. This revokes the user's access to Okta and their apps.
+
+User provisioning
+User provisioning syncs user account information between Okta and an app. It includes creating, updating, and deactivating users. User provisioning can be used for both upstream and downstream apps.
+•HR systems and directory services are upstream apps because they send user data to Okta. When a user's profile is sourced from an upstream app, their Okta user profile's attributes are derived exclusively from that source and can't be edited in Okta.
+•Apps, such as Salesforce or Box, are downstream apps because they receive user data from Okta. 
+
+Agent-based provisioning uses an agent installed in the local environment to manage user provisioning between Okta and the on-premise resource. Supported provisioning agents include Microsoft Active Directory (AD) and Lightweight Directory Access Protocol (LDAP).
+API-based provisioning uses System for Cross-domain Identity Management (SCIM) or vendor-specific APIs to manage user provisioning through standard web protocols.
+
+Configure SCIM Provisioning
+System for Cross-domain Identity Management (SCIM) is an open standard that automates user provisioning. It allows you to sync user account information between Okta and an app. With SCIM, you can automatically create, update, and deactivate users in the app.
+Let's see how to enable SCIM provisioning between Okta and Salesforce.
+
+
+-----------Configure SCIM Provisioning-----------------
+You need to automate user lifecycle management (LCM) processes and ensure that user account information is up-to-date across all your business systems.
+
+System for Cross-domain Identity Management (SCIM) is an open standard that automates user provisioning. It allows you to sync user account information between Okta and an app. With SCIM, you can automatically create, update, and deactivate users in the app.
+
+Let's see how to enable SCIM provisioning between Okta and Salesforce.
