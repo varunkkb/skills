@@ -114,5 +114,23 @@ something more readable and select Save.
 6.Set the ACS URL (login URL) for the app.
 
 
+----------Configure OIDC SSO--------------
+The OpenID Connect (OIDC) protocol extends the Open Authorization 2.0 (OAuth 2.0) protocol with user authentication functionality and provides federated single sign-on (SSO) for an app.
+OIDC specifies the authentication process between an application—also known as the client or service provider (SP)—and an identity provider (IdP). In this case, Okta is the IdP.
+OAuth 2.0 specifies the authorization process for an authenticated user to access a protected resource through an API server.
 
+How do OIDC and OAuth 2.0 work?
 
+OIDC uses an ID Token to hold identification information and prove that the end user has been authenticated. When an end user attempts to sign in to an application, Okta authenticates their identity. After successful authentication, the Okta authorization server mints the ID Token and returns it to the application.
+OAuth 2.0 uses an Access Token to hold authorization information and prove the application has been authorized with specific scopes needed to access certain resources. After successful authentication, the Okta authorization server mints the Access Token and returns it to the application. The resource server uses the Access Token to validate a user's level of authorization and access.
+
+OAuth 2.0 uses an Access Token to hold authorization information and prove the application has been authorized with specific scopes needed to access certain resources. After successful authentication, the Okta authorization server mints the Access Token and returns it to the application. The resource server uses the Access Token to validate a user's level of authorization and access.
+
+Integrate an OIDC app
+Before integrating with an OIDC app, you need to configure an authorization server with the needed OAuth scopes, claims, and access policies. Note that you can also use the default authorization server in Okta.
+
+When you integrate an OIDC app using the OIN, you need to configure these settings:
+
+1 In Okta, set the redirect URI and initiate login URI for the application. Note that Okta sends the authentication response and ID token to the redirect URI.
+
+2 In the application, set the client ID and secr
