@@ -1,1 +1,38 @@
 
+Use the Admin Console to Monitor Events
+
+Monitor your Okta environment's health and performance through the administrator dashboard, where you can track user activity, check system status, manage tasks, and generate detailed reports. The dashboard helps you identify potential issues, maintain security, and access troubleshooting information to keep your authentication system running smoothly.
+
+Just as your car's dashboard shows vital signs like engine health and fuel levels, the Okta Administrator Dashboard provides comprehensive visibility into your organization's health. It displays user counts, group statistics, and system status indicators, helping administrators spot potential issues before they become problems
+
+Like having an attentive passenger who notices unusual activity in and around your car, Okta HealthInsight acts as a vigilant observer of your system. It monitors configurations, provides security recommendations, and alerts you to suspicious activities reported by users, ensuring your authentication system stays secure and optimized.
+
+Similar to monitoring your car's fuel consumption and usage patterns to optimize its performance, Okta's Rate Limit Monitoring helps you track and manage your organization's resource usage. It watches your API request patterns, helps prevent service disruptions, and provides detailed logs of system activity - much like reviewing your vehicle's travel history to make better decisions about its use.
+
+
+Explore HealthInsight Recommendations
+-audit or security settings
+-suggests taks that can improve security poster
+-view a list of complete , incomplete or dismissed tasks 
+-review detailed recommentation from okta based on the org's current security settings
+-go direct to security settings to update the configuration
+- dismiss tasks so they sont appear incomplete
+
+Various healthinsight tasks recommendattons
+-limit the number of super admins [15 super admins or less than 50% of admins as super admins]
+-enable okta threatinsight to block suspicious IP addresses [WAF, bot managments , DDos, Security alert managment services]
+-disable weaker MFA factors in factor entrollment policies [enable as primary factors , okta verify [with PUSH if available], google authenticator and Web Authn, Dont enable as secondary factors security questions and SMS/Email/Voice ]
+-limited session lifetime for all policies [max ideal time 2hrs recommended]
+-enable suspicious activity reporting [ enabling suspicis user activity reporting  so adnins can take action and wrie workflows]
+-new sign on email notifications[ end user new sign-in informaed to user notification ] 
+-enablle authenticator enrollment notifications [ this sends notification when there is new authenticator enrollment applied]
+-enable autheticatior reset notifications
+-password changed/reset notification 
+-use SAML or OIDC authetucation for app access
+-evaluate a risk score for each request [configure rule so checks for user risk score and prompts MFA accordingly, like MFA everytime they sign-in]
+-blocklist newtork zones to deny access to your okta tenant [block any Ip address that are identified as a Tor anaonmyizer proxy]
+-enable strong pwd policy settings [ pwd lockout, min pwd history, min age 1hr, restriction of common pwds]
+-set a required authenticator for MFA entrollment policies
+
+
+
